@@ -1,0 +1,26 @@
+.button {
+  @include flex-center(true);
+  height: var(--button-height);
+  padding-block: 13px 14px;
+
+  color: var(--color-dark-gray);
+
+  border-radius: var(--border-radius);
+  background-color: var(--color-light-orange);
+
+  &--dark-blue {
+    padding-inline: 30px 23px;
+
+    color: var(--color-light);
+    font-weight: 700;
+    line-height: 1;
+
+    border: var(--border-light);
+    border-radius: var(--border-radius);
+    background-color: var(--color-dark-blue);
+
+    svg {
+      color: var(--color-light-orange);
+    }
+  }
+}
