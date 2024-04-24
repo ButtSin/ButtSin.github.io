@@ -29,10 +29,6 @@
     column-gap: 20px;
     height: 70px;
 
-    @include tablet {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-    }
 
     @include mobile {
       grid-template-columns: repeat(2, auto);
