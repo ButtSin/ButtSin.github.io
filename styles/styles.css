@@ -889,12 +889,6 @@ h2, .h2 {
        column-gap: 20px;
   height: 70px;
 }
-@media (max-width: 1024px) {
-  .header__inner {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-  }
-}
 @media (max-width: 500px) {
   .header__inner {
     grid-template-columns: repeat(2, auto);
@@ -908,17 +902,6 @@ h2, .h2 {
   .header__logo {
     width: 55px;
     margin-right: var(--headerMenuListGap);
-  }
-}
-@media (max-width: 1024px) {
-  .header__logo {
-    width: 75px;
-    margin-right: 0;
-  }
-}
-@media (max-width: 1024px) {
-  .header__menu {
-    display: none;
   }
 }
 .header__menu-list {
@@ -1000,14 +983,6 @@ h2, .h2 {
   .header__contacts-tel {
     width: 200px;
     padding: 0;
-  }
-}
-@media (max-width: 1024px) {
-  .header__contacts-tel {
-    width: auto;
-    height: var(--headerLinkHeight);
-    padding: 0;
-    border: none;
   }
 }
 .header svg {
