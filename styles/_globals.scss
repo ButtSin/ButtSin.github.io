@@ -1,0 +1,60 @@
+body {
+  font-family: var(--font-family-base);
+  @include setRem(14);
+  font-weight: 700;
+  color:var(--color-dirty-grey);
+  background-color: #fcfcfc;
+}
+
+:is(
+  a,
+  button,
+  input,
+  textarea,
+  svg *
+):where(:not(:focus)) {
+  transition-duration: var(--transition-duration);
+}
+
+:is(
+  a,
+  button,
+  input,
+  textarea,
+  svg * 
+):focus-visible {
+  outline: var(--outline);
+}
+
+//Отменяем стили из normilize для нормальной работы :focus в firefox
+button:-moz-focusring, 
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring, 
+[type="submit"]:-moz-focusring {
+  outline: var(--outline);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, .h1 {
+  @include fluid-text(36, 24);
+  font-weight: 800;
+}
+
+h2, .h2 {
+  @include fluid-text(30, 18);
+  font-weight: 800;
+}
+
+h3, .h3 {
+  @include fluid-text(16, 14);
+  font-weight: 700;
+}
+
+h2, .h2 {
+  @include setRem(14);
+  font-weight: 700;
+}

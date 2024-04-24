@@ -1,0 +1,25 @@
+.burger-button {
+  --burgerButtonBgColor: var(--color-light-orange);
+  position: relative;
+
+  @include square(40px);
+
+  @include hover(before) {
+    &::before {
+      --burgerButtonBgColor: var(--color-blue);
+    }
+  }
+
+  &::before {
+    @include abs-center;
+
+    content: "";
+    width: 29px;
+    height: 1px;
+
+    background-color: var(--burgerButtonBgColor);
+    box-shadow: 0 -8px var(--burgerButtonBgColor), 
+                0 8px var(--burgerButtonBgColor);
+    transition-duration: var(--transition-duration);
+  }
+}

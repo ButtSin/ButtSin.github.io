@@ -1,0 +1,163 @@
+.header {
+  --headerMenuListGap: 40px;
+  --headerLinkHeight: 70px;
+  --headerContactsContainerGap: 20px;
+
+  font-weight: 500;
+  color: var(--color-light);
+
+  background-color: var(--color-dark-blue);
+
+  
+  @include desktop {
+    --headerMenuListGap: 15px;
+    --headerContactsContainerGap: 15px;
+  }
+
+  @include tablet {
+    --headerContactsContainerGap: 12px;
+  }
+
+  @include mobile {
+    --headerContactsContainerGap: 9px;
+  }
+  
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    height: 70px;
+
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+
+  &__logo {
+    margin-right: calc(84px - var(--headerMenuListGap));
+    flex-shrink: 0;
+
+    @include desktop {
+      width: 55px;
+      margin-right: var(--headerMenuListGap);
+    }
+
+    @include tablet {
+      width: 75px;
+      margin-right: 0;
+    }
+  }
+
+  &__menu {
+    @include tablet {
+      display: none;
+    }
+    
+    &-list {
+      display: flex;
+      align-items: center;
+      column-gap: var(--headerMenuListGap);
+      max-width: 750px;
+    }
+
+    &-item {
+      position: relative;
+      
+      display: flex;
+      align-items: center;
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        translate: -50%;
+
+        content: "";
+        display: block;
+        width: 0%;
+        height: 3px;
+
+        background-color: var(--color-blue);
+
+        transition-duration: var(--transition-duration);
+      }
+
+      @include hover(after) {
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+
+    &-link {
+      display: inline-flex;
+      align-items: center;
+      height: var(--headerLinkHeight);
+
+      &.current-link {
+        text-shadow: 0 0 6px var(--color-light);
+      }
+    }
+
+    &-cross-button {
+      @include desktop {
+        width: 15px;
+        height: 15px;
+
+        font-size: 0.75rem;
+      }
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    column-gap: var(--headerContactsContainerGap);
+
+    font-style: normal;
+
+    @include mobile {
+      display: none;
+    }
+
+    &-email {
+      display: flex;
+      align-items: center;
+      height: var(--headerLinkHeight);
+
+      white-space: nowrap;
+    }
+
+    &-tel {
+      display: flex;
+      align-items: center;
+
+      white-space: nowrap;
+
+      @include desktop {
+        width: 200px;
+        padding: 0;
+      }
+
+      @include tablet {
+        width: auto;
+        height: var(--headerLinkHeight);
+        padding: 0;
+
+        border: none;
+      }
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+
+    color: var(--color-light-orange);
+  }
+}

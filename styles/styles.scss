@@ -1,0 +1,18 @@
+@import 
+  "normalize", 
+  "ownNormalize", 
+  "fonts",
+  "variables",
+  "mixins",
+  "globals",
+  "media",
+  "utils";
+
+@import 
+  "blocks/button",
+  "blocks/cross-button",
+  "blocks/burger-button",
+  "blocks/link-icon",
+  "blocks/header",
+  "blocks/mobile-overlay",
+  "blocks/slider";

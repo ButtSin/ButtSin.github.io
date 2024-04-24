@@ -1,0 +1,86 @@
+.link-icon {
+  --linkIconInnerGap: 10px;
+
+  @include hover(innerElements) {
+    .link-icon__inner-label {
+      color: var(--color-blue);
+
+      transition-duration: var(--transition-duration);
+    }
+
+    .link-icon__inner-icon {
+      fill: var(--color-blue);
+    }
+
+    .link-icon__inner-icon--stroke {
+      fill: none;
+      stroke: var(--color-blue);
+    }
+
+    .link-icon__inner-icon--bg {
+      fill: none;
+      stroke: none;
+      background-color: var(--color-blue);
+
+      transition-duration: var(--transition-duration);
+    }
+  }
+
+  &__inner {
+    position: relative;
+
+    @include flex-center;
+    column-gap: var(--linkIconInnerGap);
+  
+    fill: var(--color-light-orange);
+  
+    user-select: none;
+
+    &--large-gap {  
+      column-gap: 17px;
+
+      @include desktop {
+        column-gap: var(--linkIconInnerGap);
+      }
+    }
+
+    &--middle-gap {
+      column-gap: 13px;
+
+      @include desktop {
+        column-gap: var(--linkIconInnerGap);
+      }
+    }
+
+    &-icon {
+      fill: var(--color-light-orange);
+
+      &--stroke {
+        fill: none;
+        stroke: var(--color-light-orange);
+      }
+
+      &--absolute {
+        position: absolute;
+        left: calc(100% + var(--linkIconInnerGap));
+
+        &-right {
+          left: auto;
+          right: calc(100% + var(--linkIconInnerGap));
+        }
+      }
+    }
+
+    &-label {
+      transition-duration: var(--transition-duration);
+      
+      &--light-yellow {
+        color: var(--color-light-orange);
+      }
+
+      &--bold {
+        font-weight: 700;
+      }
+    }
+  }
+}
