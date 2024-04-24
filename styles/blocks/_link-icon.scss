@@ -1,11 +1,9 @@
 .link-icon {
   --linkIconInnerGap: 10px;
-
+  
   @include hover(innerElements) {
     .link-icon__inner-label {
       color: var(--color-blue);
-
-      transition-duration: var(--transition-duration);
     }
 
     .link-icon__inner-icon {
@@ -21,8 +19,6 @@
       fill: none;
       stroke: none;
       background-color: var(--color-blue);
-
-      transition-duration: var(--transition-duration);
     }
   }
 
@@ -33,8 +29,6 @@
     column-gap: var(--linkIconInnerGap);
   
     fill: var(--color-light-orange);
-  
-    user-select: none;
 
     &--large-gap {  
       column-gap: 17px;
@@ -55,6 +49,8 @@
     &-icon {
       fill: var(--color-light-orange);
 
+      transition-duration: var(--transition-duration);
+
       &--stroke {
         fill: none;
         stroke: var(--color-light-orange);
@@ -72,8 +68,9 @@
     }
 
     &-label {
+
       transition-duration: var(--transition-duration);
-      
+
       &--light-yellow {
         color: var(--color-light-orange);
       }

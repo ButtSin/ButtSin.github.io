@@ -46,6 +46,7 @@ body {
   Упрощаем работу с изображениями
 */
 img {
+  display: block;
   max-width: 100%;
   height: auto;
 }

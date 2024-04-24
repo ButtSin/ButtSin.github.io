@@ -32,8 +32,6 @@
     @include flex-center;
     flex-direction: column;
     padding-bottom: 18px;
-    
-    border-bottom: var(--border-dirty-grey);
   }
 
   &__item {
@@ -43,8 +41,14 @@
   &__link {
     padding-block: var(--mobileOverlayLinkPaddingBlock);
 
+    transition-duration: var(--transition-duration);
+
     &.current-link {
       text-shadow: 0 0 6px var(--color-light);
+    }
+
+    @include hover(itself) {
+      color: var(--color-blue);
     }
   }
 
@@ -52,13 +56,14 @@
     @include flex-center;
     flex-direction: column;
     row-gap: 30px;
-    margin-top: 23px;
+    padding-top: 23px;
 
     font-style: normal;
+
+    border-top: var(--border-dirty-grey);
 
     &-email {
       padding-block: var(--mobileOverlayLinkPaddingBlock);
     }
    }
-
 }

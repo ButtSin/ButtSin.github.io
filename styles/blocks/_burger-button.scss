@@ -4,13 +4,13 @@
 
   @include square(40px);
 
-  @include hover(before) {
-    &::before {
+  @include hover(after) {
+    &::after {
       --burgerButtonBgColor: var(--color-blue);
     }
   }
 
-  &::before {
+  &::after {
     @include abs-center;
 
     content: "";

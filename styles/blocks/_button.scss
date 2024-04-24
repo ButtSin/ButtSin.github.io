@@ -10,6 +10,8 @@
   border-radius: var(--border-radius);
   background-color: var(--color-pale-blue);
 
+  transition-duration: var(--transition-duration);
+
   @include hover(itself) {
     background-color: var(--color-light-orange);
   }

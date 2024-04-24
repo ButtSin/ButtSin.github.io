@@ -14,7 +14,9 @@
     --headerContactsContainerGap: 15px;
   }
 
-
+  @include tablet {
+    --headerContactsContainerGap: 12px;
+  }
 
   @include mobile {
     --headerContactsContainerGap: 9px;
@@ -27,7 +29,10 @@
     column-gap: 20px;
     height: 70px;
 
-
+    @include tablet {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+    }
 
     @include mobile {
       grid-template-columns: repeat(2, auto);
@@ -43,10 +48,16 @@
       margin-right: var(--headerMenuListGap);
     }
 
+    @include tablet {
+      width: 75px;
+      margin-right: 0;
+    }
   }
 
   &__menu {
-
+    @include tablet {
+      display: none;
+    }
     
     &-list {
       display: flex;
@@ -60,6 +71,8 @@
       
       display: flex;
       align-items: center;
+
+      transition-duration: var(--transition-duration);
 
       &::after {
         position: absolute;
@@ -134,7 +147,13 @@
         padding: 0;
       }
 
+      @include tablet {
+        width: auto;
+        height: var(--headerLinkHeight);
+        padding: 0;
 
+        border: none;
+      }
     }
   }
 

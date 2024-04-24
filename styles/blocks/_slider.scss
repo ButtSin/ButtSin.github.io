@@ -12,14 +12,38 @@
   }
 
   @include mobile {
-    min-height:340px;
+    min-height: 340px;
+  }
+
+  &__list {
+    @include mobile {
+      display: flex;
+      width: 100%;
+      gap: var(--container-padding-x);
+      padding-bottom: var(--container-padding-x);
+
+      scroll-snap-type: x mandatory;
+      overflow-x: scroll;
+    }
   }
 
   &__slide {
-    display: flex;
+    display: none;
+
+    &.current-slide {
+      display: flex;
+    }
 
     @include tablet {
       flex-direction: column-reverse;
+    }
+
+    @include mobile {
+      display: flex;
+      width: calc(100vw - var(--container-padding-x) * 2);
+      max-height: 410px;
+
+      scroll-snap-align: center;
     }
 
     &-content {
@@ -100,6 +124,8 @@
       width: calc(50% - var(--container-padding-x));
       height: 448px;
 
+      background-color: var(--color-blue);
+
       object-fit: cover;
 
       @include desktop {
@@ -131,7 +157,7 @@
 
     @include tablet {
       left: 50%;
-      translate: -50% 100px;
+      translate: -50% 130px;
 
       flex-direction: row;
       gap: 20px;
@@ -142,42 +168,19 @@
     }
   }
 
-  &__button {
-    @include flex-center(true);
-    width: 32px;
-    height: 27px;
-    padding: 8px 12px;
-
-    border: 1px solid #ededed;
-    border-radius: 3px;
-    background-color: var(--color-light);
-
-    @include hover {
-      border-color: var(--color-pale-blue);
-      background-color: var(--color-pale-blue);
-      box-shadow: 0 4px 10px 0 rgba(243, 168, 0, 0.25);
-
-      svg {
-        filter: invert(1);
-      }
-    }
-
-    &-icon {
-      &--to-right {
-        scale: -1 1;
-      }
-    }
-  }
-
   &__pagination {
     position: absolute;
     top: calc(100% - 7px);
-    left: calc(100% - var(--container-padding-x) - 13px);
-    translate: -100% 0;
+    right: calc(var(--container-padding-x) + 13px);
+    
 
     width: calc(50% - var(--container-padding-x));
     height: 1px;
     background-color: var(--color-light-grey);
+
+    @include desktop-s {
+      right: calc(var(--container-padding-x) + 10px);
+    }
 
     @include tablet {
       top: auto;
@@ -195,21 +198,20 @@
     &-list {
       display: flex;
       width: 100%;
-      height: auto;
     }
 
     &-item {
       position: relative;
 
-      flex-basis: 25%;
+      flex-basis: 0;
+      flex-grow: 1;
     }
     
     &-button {
       position: absolute;
-      top: -1px;
-      translate: 0 -50%;
+      top: -16px;
 
-      height: 19px;
+      height: 33px;
       width: 100%; 
 
       cursor: pointer;
@@ -218,6 +220,7 @@
         &::after {
           content: "";
           display: flex;
+          width: 100%;
           height: 3px;
 
           border-radius: 3px;
