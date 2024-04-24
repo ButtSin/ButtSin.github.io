@@ -62,23 +62,9 @@ $mobile-above: 501px;
     &:active {
       @content;
 
-      @if list.index($whatElements, innerElements) {
-        & * {
-          transition-duration: 0s !important;
-        }
-      }
+
     }
    
-    @if list.index($whatElements, after) {
-      &::after {
-        transition-duration: 0s !important;
-      }
-    }
 
-    @if list.index($whatElements, before) {
-      &::before {
-        transition-duration: 0s !important;
-      }
-    }
   }
 }

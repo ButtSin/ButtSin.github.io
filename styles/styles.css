@@ -739,9 +739,6 @@ h2, .h2 {
   .burger-button:active::before {
     --burgerButtonBgColor: var(--color-blue);
   }
-  .burger-button::before {
-    transition-duration: 0s !important;
-  }
 }
 .burger-button::before {
   position: absolute;
@@ -795,9 +792,6 @@ h2, .h2 {
     stroke: none;
     background-color: var(--color-blue);
     transition-duration: var(--transition-duration);
-  }
-  .link-icon:active * {
-    transition-duration: 0s !important;
   }
 }
 .link-icon__inner {
@@ -936,9 +930,6 @@ h2, .h2 {
 @media (hover: none) {
   .header__menu-item:active::after {
     width: 100%;
-  }
-  .header__menu-item::after {
-    transition-duration: 0s !important;
   }
 }
 .header__menu-link {
