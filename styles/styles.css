@@ -512,7 +512,7 @@ ul:where([class]) {
   --buttom-height-large: 55px;
   --input-height: 26px;
   --outline: 1px solid var(--color-blue);
-  --transition-duration: 1s;
+  --transition-duration: 0.2s;
 }
 
 body {
@@ -574,7 +574,8 @@ h2, .h2 {
 /*
   Используем список whatElements, чтобы обнулять transition-duration и таким
   образом на мобильных устройствах при тапе по соответствующим элементам в 
-  некоторых браузерах видеть не начало анимации, а сразу её финал.
+  некоторых браузерах видеть максиму не начало или середину анимации, а сразу 
+  её финал.
 */
 :where(.reset-link) {
   color: inherit;
@@ -863,11 +864,6 @@ h2, .h2 {
   .header {
     --headerMenuListGap: 15px;
     --headerContactsContainerGap: 15px;
-  }
-}
-@media (max-width: 1024px) {
-  .header {
-    --headerContactsContainerGap: 12px;
   }
 }
 @media (max-width: 500px) {

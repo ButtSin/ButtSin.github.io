@@ -14,9 +14,7 @@
     --headerContactsContainerGap: 15px;
   }
 
-  @include tablet {
-    --headerContactsContainerGap: 12px;
-  }
+
 
   @include mobile {
     --headerContactsContainerGap: 9px;
@@ -44,7 +42,6 @@
       width: 55px;
       margin-right: var(--headerMenuListGap);
     }
-
 
   }
 
