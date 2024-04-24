@@ -42,6 +42,10 @@
 
   &__link {
     padding-block: var(--mobileOverlayLinkPaddingBlock);
+
+    &.current-link {
+      text-shadow: 0 0 6px var(--color-light);
+    }
   }
 
   &__contacts {

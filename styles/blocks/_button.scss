@@ -1,15 +1,21 @@
 .button {
   @include flex-center(true);
+  width: 245px;
   height: var(--button-height);
-  padding-block: 13px 14px;
+  padding: 16px 76px 18px 76px;
 
-  color: var(--color-dark-gray);
+  color: var(--color-light);
+  font-weight: 600;
 
   border-radius: var(--border-radius);
-  background-color: var(--color-light-orange);
+  background-color: var(--color-pale-blue);
+
+  @include hover(itself) {
+    background-color: var(--color-light-orange);
+  }
 
   &--dark-blue {
-    padding-inline: 30px 23px;
+    padding: 13px 23px 14px 30px;
 
     color: var(--color-light);
     font-weight: 700;
@@ -22,5 +28,35 @@
     svg {
       color: var(--color-light-orange);
     }
+
+    @include hover {
+      background-color: transparent;
+    }
+  }
+
+  &--light-orange {
+    padding-block: 13px 14px;
+
+    color: var(--color-dirty-gray);
+
+    background-color: var(--color-light-orange);
+
+    @include hover {
+      color: var(--color-light);
+      
+      background-color: var(--color-pale-blue);
+    }
+  }
+
+  &--small {
+    width: 214px;
+
+    &-pd {
+      padding-inline: 27px;
+    }
+  }
+
+  &--very-small {
+    width: 197px;
   }
 }
