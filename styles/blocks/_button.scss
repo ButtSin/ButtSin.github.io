@@ -2,7 +2,7 @@
   @include flex-center(true);
   width: 245px;
   height: var(--button-height);
-  padding: 16px 76px 18px 76px;
+  padding-block: 16px 18px;
 
   color: var(--color-light);
   font-weight: 600;
@@ -10,9 +10,17 @@
   border-radius: var(--border-radius);
   background-color: var(--color-pale-blue);
 
+  //Прописал transition-property, чтобы не анимировался outline
+  transition-property: color, background-color;
   transition-duration: var(--transition-duration);
 
+  &:focus-visible {
+    outline: var(--outline-big);
+    outline-offset: -1px;
+  }
+
   @include hover(itself) {
+    color: var(--color-pale-blue);
     background-color: var(--color-light-orange);
   }
 

@@ -1,0 +1,36 @@
+.fade {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    content: "";
+    width: calc(100% - 10px);
+    height: 40%;
+
+    background: linear-gradient(transparent, var(--color-light));
+    
+    pointer-events: none;
+  }
+
+  &--little {
+    &::after {
+      /*При масштабировании до ~50% страницы в firefox из-за увеличения
+      scrollbar'а он попадает под fade. Поэтому мы смещаем fade.*/
+      left: -0.6vw;
+      right: 100.6vw;
+      
+      height: 25%;
+    }
+  }
+
+  &--mobile-hidden {
+    &::after {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,16 +1,13 @@
 :where(.reset-link) {
-  color: inherit;
-
-  &,
-  &:hover {
-    text-decoration: none;
-  }
+  @include reset-link;
 }
 
 :where(.reset-button) {
-  padding: 0;
-  background-color: transparent;
-  border: none;
+  @include reset-button;
+}
+
+:where(.reset-input) {
+  @include reset-input;
 }
 
 .container {
@@ -18,8 +15,24 @@
   padding-inline: var(--container-padding-x);
   margin-inline: auto;
 
-  &-hidden-x {
-    overflow-x: hidden;
+  &--outline-mb {
+    @include mobile {
+      padding-inline: calc(var(--container-padding-x) - var(--outline-size));
+    }
+  }
+
+  &--outline-ts {
+    @include tablet-s {
+      padding-inline: calc(var(--container-padding-x) - var(--outline-size));
+    }
+  }
+
+  @include mobile {
+    --container-padding-x: 10px;
+
+    &--outline-mb {
+      --container-padding-x: 8px;
+    }
   }
 }
 
@@ -29,6 +42,12 @@
 
 .hidden-mobile {
   @include mobile {
+    display: none !important;
+  }
+}
+
+.hidden-tablet-s {
+  @include tablet-s {
     display: none !important;
   }
 }
@@ -44,3 +63,16 @@
     display: none !important;
   }
 }
+
+.visible-tablet-s {
+  @include tablet-s-above {
+    display: none !important;
+  }
+}
+
+.hidden-tablet-s {
+  @include tablet-s {
+    display: none !important;
+  }
+}
+

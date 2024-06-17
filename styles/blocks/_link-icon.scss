@@ -20,6 +20,10 @@
       stroke: none;
       background-color: var(--color-blue);
     }
+
+    .link-icon__inner-icon--light-orange {
+      color: var(--color-blue);
+    }
   }
 
   &__inner {
@@ -49,6 +53,8 @@
     &-icon {
       fill: var(--color-light-orange);
 
+      color: var(--color-pale-blue);
+
       transition-duration: var(--transition-duration);
 
       &--stroke {
@@ -56,19 +62,12 @@
         stroke: var(--color-light-orange);
       }
 
-      &--absolute {
-        position: absolute;
-        left: calc(100% + var(--linkIconInnerGap));
-
-        &-right {
-          left: auto;
-          right: calc(100% + var(--linkIconInnerGap));
-        }
+      &--light-orange {
+        color: var(--color-light-orange);
       }
     }
 
     &-label {
-
       transition-duration: var(--transition-duration);
 
       &--light-yellow {

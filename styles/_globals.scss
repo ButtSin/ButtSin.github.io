@@ -6,11 +6,24 @@ body {
   background-color: #fcfcfc;
 }
 
-:is(
+:where(
   a,
   button,
   input,
   textarea,
+  summary,
+  svg *
+) {
+  outline-color: var(--outline-color);
+  outline-offset: 0; //Для хрома, у которого он увеличивается
+}
+
+:where(
+  a,
+  button,
+  input,
+  textarea,
+  summary,
   svg * 
 ):focus-visible {
   outline: var(--outline);
@@ -36,7 +49,7 @@ h3, .h3 {
   font-weight: 700;
 }
 
-h2, .h2 {
+h4, .h4 {
   @include setRem(14);
   font-weight: 700;
 }
