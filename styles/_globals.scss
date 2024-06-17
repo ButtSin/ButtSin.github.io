@@ -1,0 +1,55 @@
+body {
+  font-family: var(--font-family-base);
+  @include setRem(14);
+  font-weight: 700;
+  color:var(--color-dirty-grey);
+  background-color: #fcfcfc;
+}
+
+:where(
+  a,
+  button,
+  input,
+  textarea,
+  summary,
+  svg *
+) {
+  outline-color: var(--outline-color);
+  outline-offset: 0; //Для хрома, у которого он увеличивается
+}
+
+:where(
+  a,
+  button,
+  input,
+  textarea,
+  summary,
+  svg * 
+):focus-visible {
+  outline: var(--outline);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1, .h1 {
+  @include fluid-text(36, 24);
+  font-weight: 800;
+}
+
+h2, .h2 {
+  @include fluid-text(30, 18);
+  font-weight: 800;
+}
+
+h3, .h3 {
+  @include fluid-text(16, 14);
+  font-weight: 700;
+}
+
+h4, .h4 {
+  @include setRem(14);
+  font-weight: 700;
+}
