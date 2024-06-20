@@ -26,6 +26,12 @@
     }
   }
 
+  &:focus-within {
+    @media (hover: none) {
+      transition-duration: 0s;
+    }
+  }
+
   &--elongated {
     width: 32px;
     height: 27px;

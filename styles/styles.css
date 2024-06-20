@@ -1233,6 +1233,11 @@ h4, .h4 {
     filter: invert(1);
   }
 }
+@media (hover: none) {
+  .pagination-button:focus-within {
+    transition-duration: 0s;
+  }
+}
 .pagination-button--elongated {
   width: 32px;
   height: 27px;
