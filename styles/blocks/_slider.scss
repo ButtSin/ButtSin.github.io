@@ -5,13 +5,13 @@
   position: relative;
 
   min-height: 477px;
-  margin-bottom: 99px;
+  margin-left: -1px;
+  margin-bottom: 98px;
 
   @include desktop {
     min-height: 407px;
-    margin-bottom: 69px;  
-    
     --sliderImageHeight: 378px;
+    margin-bottom: 69px;  
   }
 
   @include tablet {
@@ -19,7 +19,8 @@
   }
 
   @include mobile {
-    margin-bottom: 34px;
+    margin-left: 0px;
+    margin-bottom: 33.5px;
   }
 
   &__list {
@@ -74,7 +75,7 @@
     }
 
     &-link {
-      margin-top: 65px;
+      margin-top: 64px;
 
       font-weight: 700;
 
@@ -87,15 +88,16 @@
       }
 
       @include mobile {
-        margin-top: 12px;
-        margin-left: var(--sliderMirrorElementsPadding);
+        margin-top: 10px;
+        margin-left: calc(var(--sliderMirrorElementsPadding) - 1px);
       }
     }
 
     &-heading {
       margin-bottom: 54px;
 
-      line-height: 1.1;
+      line-height: 1.11;
+      letter-spacing: 0.02rem;
 
       @include desktop {
         margin-bottom: 30px;
@@ -106,20 +108,14 @@
       }
 
       @include mobile {
-        margin-bottom: 13px;
+        margin-bottom: 15px;
 
         line-height: 1.3;
       }
 
-      &--light-orange {
-        color: var(--color-light-orange);
-      }
-
-      &--letters-wide {
-        letter-spacing: 0.04rem;
-        
-        @include tablet-s {
-          letter-spacing: 0.02rem;
+      &-text {
+        &--light-orange {
+          color: var(--color-light-orange);
         }
       }
     }
@@ -128,7 +124,7 @@
       position: relative;
 
       color: var(--color-warm-grey);
-      line-height: 1.6;
+      line-height: 1.57;
 
       @include mobile-above {
         &::after {
@@ -145,7 +141,7 @@
       &-inner {
         @include mobile {
           height: 110px;
-          padding-right: var(--container-padding-x);
+          padding-right: 20px;
 
           overflow-y: auto;
         }
@@ -153,7 +149,7 @@
     }
 
     &-media {
-      width: 51%;
+      width: 50.7%;
       flex-shrink: 0;
       align-self: flex-start;
 
@@ -212,16 +208,16 @@
 
   &__pagination {
     position: absolute;
-    top: calc(var(--sliderImageHeight) + 3px + 16px);
-    right: calc(var(--container-padding-x) + 13px);
-    
+    top: calc(var(--sliderImageHeight) + 20px);
+    right: var(--container-padding-x);
 
-    width: calc(50% - var(--container-padding-x));
+    width: calc(50.5% - var(--container-padding-x));
     height: 1px;
+    
     background-color: var(--color-light-grey);
 
-    @include desktop-s {
-      right: calc(var(--container-padding-x) + 10px);
+    @include desktop {
+      width: calc(50.6% - var(--container-padding-x));
     }
 
     @include tablet {
@@ -243,6 +239,14 @@
 
       flex-basis: 0;
       flex-grow: 1;
+
+      &:not(:first-child) .slider__pagination-button {
+        padding-left: 10px;
+      }
+
+      &:not(:last-child) .slider__pagination-button {
+        padding-right: 10px;
+      }
     }
     
     &-button {

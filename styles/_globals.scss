@@ -15,7 +15,7 @@ body {
   svg *
 ) {
   outline-color: var(--outline-color);
-  outline-offset: 0; //Для хрома, у которого он увеличивается
+  outline-offset: 0; //Для движка хрома, у которого он увеличивается
 }
 
 :where(

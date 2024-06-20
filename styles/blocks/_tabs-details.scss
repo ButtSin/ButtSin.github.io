@@ -1,6 +1,12 @@
 .tabs-details {
+  //На макете блок занимает 1264 пикселя, что выходит за рамки 
+  //основного контейнера, поэтому считаю, что это дизайнерская ошибка
+  //и корректирую его так, чтобы все размеры элементов совпадали с максимально
+  //похожим отступом.
   --tabsDetailsLinkPaddingBlock: 14px 18px;
+  --tabsDetailsHeaderPaddingBlock: 0;
   --tabsDetailsAccordionMarginLeft: 5px;
+
   display: flex;
 
   @include tablet-s {
@@ -22,9 +28,17 @@
       margin-right: 25px;
       margin-left: var(--tabsDetailsAccordionMarginLeft);
 
+      &:nth-child(even) {        
+        --tabsDetailsHeaderPaddingBlock: 20px 25px;
+      }
+
+      &:nth-child(odd) {
+        --tabsDetailsHeaderPaddingBlock: 21.5px 21px;
+      }
+
       &:first-child {
         .tabs-details__accordion-header {
-          padding-top: 0;
+          padding-top: 1.5px;
         }
       }
 
@@ -45,6 +59,14 @@
       @include tablet-s {
         margin-inline: 0;
         padding-inline: 23px;   
+
+        &:nth-child(even) {        
+          --tabsDetailsLinkPaddingBlock: 17px 14px;
+        }
+  
+        &:nth-child(odd) {
+            --tabsDetailsLinkPaddingBlock: 14px 17px;
+        }
       }
     }
 
@@ -84,7 +106,6 @@
 
         transition-duration: var(--transition-duration);
 
-
         @include tablet {
           @include setRem(16); 
         }
@@ -96,7 +117,7 @@
     }
     
     &-header {
-      padding-block: 22px;
+      padding-block: var(--tabsDetailsHeaderPaddingBlock);
 
       @include setRem(14);
 
@@ -109,10 +130,6 @@
       @include hover {
         color: var(--color-blue) !important;
       }
-
-      @include tablet {
-        padding-block: var(--tabsDetailsLinkPaddingBlock);
-      }
     }
 
     &-description {
@@ -120,7 +137,7 @@
 
       font-weight: 400;
       @include setRem(14);
-      line-height: 1.6;
+      line-height: 1.57;
       color: var(--color-warm-grey);
       
       p {
@@ -130,6 +147,7 @@
 
     &-link {
       width: 100%;
+      margin-top: 1px;
     }
   }
 
@@ -148,7 +166,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        gap: 22px 19px;
+        gap: 22px 18px;
         min-height: 462px;
       
         @include desktop {

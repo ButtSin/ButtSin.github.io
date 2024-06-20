@@ -18,10 +18,8 @@
   &--little {
     &::after {
       /*При масштабировании до ~50% страницы в firefox из-за увеличения
-      scrollbar'а он попадает под fade. Поэтому мы смещаем fade.*/
-      left: -0.6vw;
-      right: 100.6vw;
-      
+      scrollbar'а он попадает под fade. Поэтому мы уменьшаем fade.*/
+      width: 97%;
       height: 25%;
     }
   }

@@ -1,12 +1,18 @@
 .catalog {
-  margin-bottom: 86px;
+  margin-bottom: 88px;
 
   @include tablet {
-    margin-bottom: 45px;
+    margin-bottom: 60px;
+  }
+
+  @include tablet-s {
+    margin-bottom: 52px;
   }
 
   &__header {
     margin-bottom: 64px;
+
+    letter-spacing: var(--letter-spacing);
 
     @include desktop {
       margin-bottom: 44px;
@@ -17,6 +23,8 @@
     }
     
     @include tablet-s {
+      left: -3px;
+
       margin-bottom: 11px;
     }
   }

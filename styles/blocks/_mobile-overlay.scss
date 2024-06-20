@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   padding: 0 12px;
-
+  
   @include setRem(16);
   color: var(--color-light);
   font-weight: 500;
@@ -26,6 +26,8 @@
       margin: 20px 8.5px 36px 0;
   
       @include mobile {
+        //Не по дизайну, так как считаю, что кнопка закрытия должна находиться
+        //ровно по середине кнопки открытия
         margin-right: -2.5px;
       }
     }
@@ -39,6 +41,9 @@
 
   &__item {
     display: inline-flex;
+    //Элементы должны располагаться ровно по центру, а не со смещением, поэтому
+    //не стал делать им отступ слева в несколько пикселей. Думаю, что в макете
+    //ошибка.
 
     &--relative-left {
       position: relative;
@@ -55,23 +60,49 @@
       color: var(--color-blue);
     }
 
+    &--big {
+      font-weight: 700;
+      column-gap: 15.5px;
+    }
+
     &-icon {
       color: var(--color-dark);
     }
   }
 
   &__contacts {
-    @include flex-center;
-    flex-direction: column;
-    row-gap: 18px;
+    &-list {
+      @include flex-center;
+      flex-direction: column;
+      row-gap: 18px;
 
-    font-style: normal;
-    @include setRem(14);
+      font-style: normal;
+      @include setRem(14);
 
-    border-top: var(--border-dirty-grey);
-
-    &-email {
-      padding-block: var(--mobileOverlayLinkPaddingBlock);
+      border-top: var(--border-dirty-grey);
     }
    }
+
+  &__email {
+    display: flex;
+    padding-left: 6px;
+    padding-block: var(--mobileOverlayLinkPaddingBlock);
+
+    &-inner {
+      position: relative;
+      left: -6px;
+    }
+  }
+
+  &__tel {
+    //Элемент должны располагаться ровно по центру, а не со смещением, поэтому
+    //не стал делать ему отступ слева в несколько пикселей. Думаю, что в макете
+    //ошибка.
+    &-inner {
+      column-gap: 8px;
+      margin-left: -7px;
+
+      letter-spacing: var(--letter-spacing-little);
+    }
+  }
 }

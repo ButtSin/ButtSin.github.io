@@ -6,6 +6,7 @@
 
     content: "";
     @include square(var(--downloadIconSize));
+    
     background: url("../../images/files/arrow-down.svg") no-repeat 
       center / contain;
   }

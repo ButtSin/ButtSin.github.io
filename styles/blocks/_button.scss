@@ -21,6 +21,7 @@
 
   @include hover(itself) {
     color: var(--color-pale-blue);
+    
     background-color: var(--color-light-orange);
   }
 
@@ -58,7 +59,7 @@
     }
   }
 
-  &--small {
+  &--little {
     width: 214px;
 
     &-pd {
@@ -66,7 +67,7 @@
     }
   }
 
-  &--very-small {
+  &--very-little {
     width: 197px;
   }
 }

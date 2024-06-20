@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="/styles/styles.css" rel="stylesheet">
+  <meta name="description" content="I-LIGHTS - Ваш надежный партнер в сфере 
+  коммерческого освещения. С многолетним опытом, мы предлагаем профессиональные 
+  светотехнические решения для магазинов, офисов и развлекательных объектов. 
+  От проектирования до поставки, I-LIGHTS обеспечивает качественное освещение
+  из лучших мировых и Российских брендов, улучшая атмосферу рабочих, торговых 
+  и отдыхающих пространств." />
+  <link href="/styles/styles.min.css" rel="stylesheet">
   <title>I-LIGHTS - Эффективные решения</title>
 </head>
 <body>  
@@ -12,7 +18,7 @@
       <a class="header__logo" href="#">
         <img class="logo" src="./images/logo.png" 
           alt="Логотип сайта I-LIGHTS - Эффективные решения" width="75" 
-            height="48" loading="lazy">
+            height="48">
       </a>
       <nav class="header__menu">
         <ul class="header__menu-list">
@@ -33,14 +39,14 @@
             <a class="header__menu-link" href="#">Контакты</a>
           </li>
           <li class="header__menu-item link-icon">
-            <a class="header__menu-link link-icon__inner 
-              link-icon__inner--large-gap" 
-                href="#">
+            <a class="header__menu-link header__menu-link--big
+              link-icon__inner" href="#">
               <span class="link-icon__inner-label 
-                link-icon__inner-label--light-yellow
-                link-icon__inner-label--bold">Подборка</span>
+                link-icon__inner-label--light-yellow">
+                Подборка
+              </span>
               <span class="link-icon__inner-icon 
-                link-icon__inner-icon--bg cross-button">
+                link-icon__inner-icon--hover-bg cross-button">
                 <span class="cross-icon cross-icon--very-little"></span>
               </span>
             </a>
@@ -48,30 +54,35 @@
         </ul>  
       </nav>
       <address class="header__contacts">
-        <a class="header__contacts-email link-icon" 
-          href="mailto:info@i-lights.ru">
-          <div class="link-icon__inner">
-            <svg class="link-icon__inner-icon" width="15" height="13" 
-              viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5832 2.25004C14.5832 1.47087 13.9457 0.833374 13.1665 0.833374H1.83317C1.054 0.833374 0.416504 1.47087 0.416504 2.25004V10.75C0.416504 11.5292 1.054 12.1667 1.83317 12.1667H13.1665C13.9457 12.1667 14.5832 11.5292 14.5832 10.75V2.25004ZM13.1665 2.25003L7.49982 5.7917L1.83316 2.25003H13.1665ZM13.1665 10.75H1.83316V3.6667L7.49982 7.20836L13.1665 3.6667V10.75Z"/>
-            </svg>            
-            <span class="link-icon__inner-label">info@i-lights.ru</span>   
-          </div>
-        </a>
-        <a class="header__contacts-tel link-icon button button--dark-blue
-          button--small" href="tel:+74952335557">
-          <div class="link-icon__inner link-icon__inner--middle-gap">
-            <svg class="link-icon__inner-icon 
-              link-icon__inner-icon--stroke" width="16" height="16" 
-                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.799805 2.33338C0.799805 1.92672 0.961349 1.53671.24891 1.24915C1.53646 0.961593 1.92648 0.800049 2.33314 0.800049H4.8478C5.00864 0.800169 5.16537 0.850873 5.29581 0.944985C5.42624 1.0391 5.52378 1.17185 5.5746 1.32445L6.72307 4.76908C6.78126 4.94414 6.77438 5.13431 6.70369 5.30471C6.633 5.4751 6.50323 5.6143 6.3382 5.69674L4.60784 6.56308C5.45601 8.44029 6.95956 9.94381 8.83676 10.792L9.70308 9.06165C9.78556 8.89661 9.92476 8.76685 10.0952 8.69613C10.2656 8.62549 10.4557 8.61861 10.6308 8.67677L14.0754 9.82525C14.2281 9.87613 14.361 9.97373 14.4551 10.1044C14.5492 10.2349 14.5998 10.3918 14.5998 10.5528V13.0667C14.5998 13.4734 14.4383 13.8634 14.1507 14.1509C13.8632 14.4385 13.4732 14.6 13.0664 14.6H12.2998C5.94874 14.6 0.799805 9.45109 0.799805 3.10005V2.33338Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="link-icon__inner-label 
-            link-icon__inner-label--bold">
-              +7 (495) 233 55 57
-            </span>
-          </div>
-        </a>
+        <ul class="header__contacts-list">
+          <li class="header__contacts-item">
+            <a class="header__email link-icon" 
+              href="mailto:info@i-lights.ru">
+              <div class="header__email-inner link-icon__inner">
+                <svg class="link-icon__inner-icon" width="15" height="13" 
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M14.58 2.25c0-.78-.63-1.42-1.41-1.42H1.83C1.05.83.42 1.47.42 2.25v8.5c0 .78.63 1.42 1.41 1.42h11.34c.78 0 1.41-.64 1.41-1.42v-8.5Zm-1.41 0L7.5 5.79 1.83 2.25h11.34Zm0 8.5H1.83V3.67L7.5 7.2l5.67-3.54v7.08Z"/>                
+                </svg>            
+                <span class="link-icon__inner-label">info@i-lights.ru</span>   
+              </div>
+            </a>
+          </li>
+          <li class="header__contacts-item">
+            <a class="header__tel link-icon button button--dark-blue
+             button--little" href="tel:+74952335557">
+              <div class="header__tel-inner link-icon__inner">
+                <svg class="link-icon__inner-icon 
+                  link-icon__inner-icon--stroke" width="16" height="16" 
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#a)"><path d="M.8 2.33A1.53 1.53 0 0 1 2.33.8h2.52a.77.77 0 0 1 .72.52l1.15 3.45a.77.77 0 0 1-.38.93l-1.73.86a8.47 8.47 0 0 0 4.23 4.23l.86-1.73a.77.77 0 0 1 .93-.38l3.45 1.15a.77.77 0 0 1 .52.72v2.52a1.53 1.53 0 0 1-1.53 1.53h-.77A11.5 11.5 0 0 1 .8 3.1v-.77Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="a"><path d="M0 0h16v16H0z"/></clipPath></defs>
+                </svg>
+                <span class="link-icon__inner-label">
+                  +7 (495) 233 55 57
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
       </address>
       <button class="header__burger-button burger-button reset-button 
         visible-tablet" type="button" onclick="mobileOverlay.showModal()">
@@ -87,13 +98,13 @@
             <div class="slider__slide current-slide">
               <div class="slider__slide-content">
                 <h1 class="slider__slide-heading">
-                  <span class="slider__slide-heading--light-orange">
+                  <span class="slider__slide-heading-text 
+                  slider__slide-heading-text--light-orange">
                     I-LIGHTS
                   </span>
-                  <span class="slider__slide-heading--letters-wide"> 
-                    - Эффективные      
-                  </span>
-                  решения
+                  <span class="slider__slide-heading-text"> 
+                    - Эффективные решения
+                </span>
                 </h1>
                 <div class="slider__slide-description fade">
                   <div class="slider__slide-description-inner scrollbar ">
@@ -105,14 +116,14 @@
                   </div>
                 </div>
                 <a class="slider__slide-link button button--light-orange
-                  button--very-small" href="#">
+                  button--very-little" href="#">
                   Подробнее
                 </a>
               </div>
               <figure class="slider__slide-media">
                 <img class="slider__slide-image" 
-                src="./images/slider/1.jpg" alt="Комната с освещением от 
-                компании I-lights" width="969" height="448" loading="lazy">
+                src="./images/slider/1.webp" alt="Комната с освещением от 
+                компании I-lights" width="969" height="448">
               </figure>
             </div>
           </div>
@@ -153,13 +164,13 @@
                   </div>
                 </div>
                 <a class="slider__slide-link button button--light-orange
-                  button--very-small" href="#">
+                  button--very-little" href="#">
                   Подробнее
                 </a>
               </div>
               <div class="slider__slide-media">
                 <img class="slider__slide-image" 
-                src="./images/slider/1.jpg" alt="Комната с освещением от 
+                src="./images/slider/1.webp" alt="Комната с освещением от 
                 компании I-lights" width="969" height="448" loading="lazy">
               </div>
             </div>
@@ -203,13 +214,13 @@
                   </div>
                 </div>
                 <a class="slider__slide-link button button--light-orange
-                  button--very-small" href="#">
+                  button--very-little" href="#">
                   Подробнее
                 </a>
               </div>
               <div class="slider__slide-media">
                 <img class="slider__slide-image" 
-                src="./images/slider/1.jpg" alt="Комната с освещением от 
+                src="./images/slider/1.webp" alt="Комната с освещением от 
                 компании I-lights" width="969" height="448" loading="lazy">
               </div>
             </div>
@@ -253,13 +264,13 @@
                   </div>
                 </div>
                 <a class="slider__slide-link button button--light-orange
-                  button--very-small" href="#">
+                  button--very-little" href="#">
                   Подробнее
                 </a>
               </div>
               <div class="slider__slide-media">
                 <img class="slider__slide-image" 
-                src="./images/slider/1.jpg" alt="Комната с освещением от 
+                src="./images/slider/1.webp" alt="Комната с освещением от 
                 компании I-lights" width="969" height="448" loading="lazy">
               </div>
             </div>
@@ -270,9 +281,9 @@
           pagination-button--elongated reset-button" type="button">
             <span class="visually-hidden">Предыдущий слайд</span>
             <svg class="slider__button-icon pagination-button__icon" 
-              width="7" height="11" viewBox="0 0 7 11" fill="none" 
+              width="7" height="11" fill="none" 
               xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.55868e-08 5.5L5.5 1.78873e-08L7 1.5L3 5.5L7 9.5L5.4 11L6.55868e-08 5.5Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.5 5.5 0 7 1.5l-4 4 4 4L5.4 11 0 5.5Z" fill="#fff"/>
             </svg>
           </button>
           <button class="slider__button pagination-button shadow
@@ -280,9 +291,9 @@
             <span class="visually-hidden">Предыдущий слайд</span>
             <svg class="slider__button-icon pagination-button__icon
             pagination-button__icon--to-right" 
-              width="7" height="11" viewBox="0 0 7 11" fill="none" 
+              width="7" height="11" fill="none" 
               xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M6.55868e-08 5.5L5.5 1.78873e-08L7 1.5L3 5.5L7 9.5L5.4 11L6.55868e-08 5.5Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 5.5 5.5 0 7 1.5l-4 4 4 4L5.4 11 0 5.5Z" fill="#fff"/>
             </svg>
           </button>
         </div>
@@ -302,7 +313,7 @@
               </button>
             </li>
             <li class="slider__pagination-item">
-              <button class="slider__pagination-button reset-button " 
+              <button class="slider__pagination-button reset-button" 
                 type="button">
                 <span class="visually-hidden">Третий слайд</span>
               </button>
@@ -319,8 +330,8 @@
     </section>
     <section class="section container catalog">
       <header class="section__header catalog__header">
-        <h2 class="section__header-title section__header-title--small-lh 
-          section__header-title--orange section__header-title--relative-left">
+        <h2 class="section__header-title section__header-title--little-lh 
+          section__header-title--orange">
           Каталог
         </h2>
       </header>
@@ -453,7 +464,7 @@
             <ul class="tabs-details__content-list current-list">
               <li class="tabs-details__content-item">
                 <img class="tabs-details__content-image" 
-                  src="./images/tabs/lamp.jpg" alt="Светильник Arco" 
+                  src="./images/tabs/lamp.webp" alt="Светильник Arco" 
                     width="306" height="462" loading="lazy">
                 <a class="tabs-details__content-link shadow" href="#">
                   <div class="tabs-details__content-link-inner">
@@ -473,7 +484,7 @@
               </li>
               <li class="tabs-details__content-item">
                 <img class="tabs-details__content-image" 
-                  src="./images/tabs/lamp.jpg" alt="Светильник Evo M" 
+                  src="./images/tabs/lamp.webp" alt="Светильник Evo M" 
                     width="306" height="220" loading="lazy">
                   <a class="tabs-details__content-link shadow" href="#">
                     <div class="tabs-details__content-link-inner">
@@ -490,7 +501,7 @@
               </li>
               <li class="tabs-details__content-item">
                 <img class="tabs-details__content-image" 
-                  src="./images/tabs/lamp.jpg" alt="Светильник Evo L" 
+                  src="./images/tabs/lamp.webp" alt="Светильник Evo L" 
                     width="306" height="220" loading="lazy">
                   <a class="tabs-details__content-link shadow" href="#">
                     <div class="tabs-details__content-link-inner">
@@ -507,7 +518,7 @@
               </li>
               <li class="tabs-details__content-item">
                 <img class="tabs-details__content-image" 
-                  src="./images/tabs/lamp.jpg" alt="Светильник Alfa" 
+                  src="./images/tabs/lamp.webp" alt="Светильник Alfa" 
                     width="306" height="462" loading="lazy">
                   <a class="tabs-details__content-link shadow" href="#">
                     <div class="tabs-details__content-link-inner">
@@ -529,8 +540,8 @@
     </section>
     <section class="section container services">
       <header class="section__header services__header">
-        <h2 class="section__header-title section__header-title--small-lh 
-         section__header-title--orange section__header-title--relative-left">
+        <h2 class="section__header-title section__header-title--little-lh 
+         section__header-title--orange services__header-title">
           Услуги
         </h2>
       </header>
@@ -722,7 +733,7 @@
     <section class="section container new-items">
       <header class="section__header new-items__header">
         <h2 class="section__header-title section__header-title--orange
-          section__header-title--small-lh section__header-title--relative-left">
+          section__header-title--little-lh new-items__header-title">
           Новинки
         </h2>
       </header>
@@ -735,7 +746,7 @@
                   Вт
                 </p>
                 <img class="product-card__header-image" alt="Дизайнерский
-                  светильник" src="images/new-items/1.jpg" width="256" 
+                  светильник" src="images/new-items/1.webp" width="256" 
                     height="96" loading="lazy">
               </div>
               <div class="product-card__body">
@@ -744,7 +755,7 @@
                 </h3>
                 <ul class="product-card__body-list hidden-tablet-s">
                   <li class="product-card__body-item">
-                    Длина до 3 метров.
+                    Длинна до 3 метров.
                   </li>
                   <li class="product-card__body-item">
                     Углы поворота между секторами по проекту.
@@ -757,7 +768,7 @@
                   21 300
                   <svg class="product-card__body-price-currency" width="13" 
                     height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.20473 11.0319H3.25936V12.7717C3.25936 12.8564 3.28678 12.9257 3.34194 12.9799C3.39695 13.0344 3.46728 13.0616 3.55295 13.0616H5.08465C5.16414 13.0616 5.23293 13.0344 5.29103 12.9799C5.34913 12.9257 5.37809 12.8564 5.37809 12.7717V11.0319H10.0101C10.0956 11.0319 10.1659 11.005 10.2211 10.9504C10.2763 10.896 10.3037 10.8266 10.3037 10.742V9.58216C10.3037 9.498 10.2763 9.4282 10.2211 9.37404C10.1661 9.31952 10.0956 9.29226 10.0101 9.29226H5.37794V8.22305H8.49652C9.71943 8.22305 10.7175 7.85495 11.4913 7.11771C12.2647 6.38123 12.6516 5.42989 12.6516 4.26362C12.6516 3.09813 12.2647 2.14677 11.4913 1.40954C10.7177 0.673048 9.71941 0.304199 8.49652 0.304199H3.5528C3.46711 0.304199 3.39693 0.331433 3.34179 0.385626C3.28678 0.44012 3.25921 0.509893 3.25921 0.594071V6.29338H1.20473C1.11906 6.29338 1.04885 6.32201 0.993715 6.37938C0.938728 6.43678 0.911133 6.50472 0.911133 6.58323V7.93313C0.911133 8.01778 0.938551 8.08713 0.993715 8.1416C1.04888 8.19612 1.1189 8.22303 1.20473 8.22303H3.25936V9.29223H1.20473C1.11906 9.29223 1.04885 9.31949 0.993715 9.37401C0.938728 9.42818 0.911133 9.49783 0.911133 9.58213V10.7419C0.911133 10.8266 0.938551 10.8959 0.993715 10.9504C1.04885 11.005 1.11903 11.0319 1.20473 11.0319ZM5.37794 2.23432H8.31308C8.96118 2.23432 9.48391 2.42151 9.88151 2.79601C10.2789 3.17053 10.4777 3.65997 10.4777 4.26377C10.4777 4.86788 10.2789 5.35747 9.88151 5.73154C9.48391 6.10637 8.96115 6.29355 8.31308 6.29355H5.37794V2.23432Z" fill="#535353"/>
+                    <path d="M1.2 11.03h2.06v1.74a.28.28 0 0 0 .3.3h1.52a.3.3 0 0 0 .21-.09.27.27 0 0 0 .09-.2v-1.75H10c.09 0 .16-.02.21-.08a.28.28 0 0 0 .08-.2V9.57a.28.28 0 0 0-.29-.29H5.38V8.22H8.5c1.22 0 2.22-.37 3-1.1a3.76 3.76 0 0 0 1.15-2.86c0-1.16-.39-2.11-1.16-2.85a4.17 4.17 0 0 0-3-1.1H3.56a.29.29 0 0 0-.2.08.28.28 0 0 0-.1.2v5.7H1.2a.28.28 0 0 0-.2.09.28.28 0 0 0-.09.2v1.35a.28.28 0 0 0 .3.3h2.05v1.06H1.2a.28.28 0 0 0-.3.29v1.16a.28.28 0 0 0 .3.3Zm4.18-8.8H8.3c.65 0 1.17.2 1.57.57.4.37.6.86.6 1.46s-.2 1.1-.6 1.47c-.4.38-.92.56-1.57.56H5.38V2.23Z" fill="#535353"/>
                   </svg>                     
                 </p>
               </div>
@@ -768,6 +779,9 @@
                 <form class="product-card__footer-form" method="" action="">
                   <button class="product-card__footer-button reset-button" 
                     type="submit">
+                    <span class="visually-hidden">
+                      Добавить в подборку
+                    </span>
                     <span class="product-card__footer-button-icon cross-icon">
                     </span>
                   </button>
@@ -782,7 +796,7 @@
                   Вт
                 </p>
                 <img class="product-card__header-image" alt="Дизайнерский
-                  светильник" src="images/new-items/2.jpg" width="128" 
+                  светильник" src="images/new-items/2.webp" width="128" 
                     height="181" loading="lazy">
               </div>
               <div class="product-card__body">
@@ -791,7 +805,7 @@
                 </h3>
                 <ul class="product-card__body-list hidden-tablet-s">
                   <li class="product-card__body-item">
-                    Длина до 3 метров.
+                    Длинна до 3 метров.
                   </li>
                   <li class="product-card__body-item">
                     Углы поворота между секторами по проекту.
@@ -804,7 +818,7 @@
                   41 500
                   <svg class="product-card__body-price-currency" width="13" 
                     height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.20473 11.0319H3.25936V12.7717C3.25936 12.8564 3.28678 12.9257 3.34194 12.9799C3.39695 13.0344 3.46728 13.0616 3.55295 13.0616H5.08465C5.16414 13.0616 5.23293 13.0344 5.29103 12.9799C5.34913 12.9257 5.37809 12.8564 5.37809 12.7717V11.0319H10.0101C10.0956 11.0319 10.1659 11.005 10.2211 10.9504C10.2763 10.896 10.3037 10.8266 10.3037 10.742V9.58216C10.3037 9.498 10.2763 9.4282 10.2211 9.37404C10.1661 9.31952 10.0956 9.29226 10.0101 9.29226H5.37794V8.22305H8.49652C9.71943 8.22305 10.7175 7.85495 11.4913 7.11771C12.2647 6.38123 12.6516 5.42989 12.6516 4.26362C12.6516 3.09813 12.2647 2.14677 11.4913 1.40954C10.7177 0.673048 9.71941 0.304199 8.49652 0.304199H3.5528C3.46711 0.304199 3.39693 0.331433 3.34179 0.385626C3.28678 0.44012 3.25921 0.509893 3.25921 0.594071V6.29338H1.20473C1.11906 6.29338 1.04885 6.32201 0.993715 6.37938C0.938728 6.43678 0.911133 6.50472 0.911133 6.58323V7.93313C0.911133 8.01778 0.938551 8.08713 0.993715 8.1416C1.04888 8.19612 1.1189 8.22303 1.20473 8.22303H3.25936V9.29223H1.20473C1.11906 9.29223 1.04885 9.31949 0.993715 9.37401C0.938728 9.42818 0.911133 9.49783 0.911133 9.58213V10.7419C0.911133 10.8266 0.938551 10.8959 0.993715 10.9504C1.04885 11.005 1.11903 11.0319 1.20473 11.0319ZM5.37794 2.23432H8.31308C8.96118 2.23432 9.48391 2.42151 9.88151 2.79601C10.2789 3.17053 10.4777 3.65997 10.4777 4.26377C10.4777 4.86788 10.2789 5.35747 9.88151 5.73154C9.48391 6.10637 8.96115 6.29355 8.31308 6.29355H5.37794V2.23432Z" fill="#535353"/>
+                    <path d="M1.2 11.03h2.06v1.74a.28.28 0 0 0 .3.3h1.52a.3.3 0 0 0 .21-.09.27.27 0 0 0 .09-.2v-1.75H10c.09 0 .16-.02.21-.08a.28.28 0 0 0 .08-.2V9.57a.28.28 0 0 0-.29-.29H5.38V8.22H8.5c1.22 0 2.22-.37 3-1.1a3.76 3.76 0 0 0 1.15-2.86c0-1.16-.39-2.11-1.16-2.85a4.17 4.17 0 0 0-3-1.1H3.56a.29.29 0 0 0-.2.08.28.28 0 0 0-.1.2v5.7H1.2a.28.28 0 0 0-.2.09.28.28 0 0 0-.09.2v1.35a.28.28 0 0 0 .3.3h2.05v1.06H1.2a.28.28 0 0 0-.3.29v1.16a.28.28 0 0 0 .3.3Zm4.18-8.8H8.3c.65 0 1.17.2 1.57.57.4.37.6.86.6 1.46s-.2 1.1-.6 1.47c-.4.38-.92.56-1.57.56H5.38V2.23Z" fill="#535353"/>
                   </svg>                
                 </p>
               </div>
@@ -815,6 +829,9 @@
                 <form class="product-card__footer-form" method="" action="">
                   <button class="product-card__footer-button reset-button" 
                     type="submit">
+                    <span class="visually-hidden">
+                      Добавить в подборку
+                    </span>
                     <span class="product-card__footer-button-icon cross-icon">
                     </span>
                   </button>
@@ -829,7 +846,7 @@
                   Вт
                 </p>
                 <img class="product-card__header-image" alt="Дизайнерский
-                  светильник" src="images/new-items/1.jpg" width="256" 
+                  светильник" src="images/new-items/1.webp" width="256" 
                     height="96" loading="lazy">
               </div>
               <div class="product-card__body">
@@ -838,7 +855,7 @@
                 </h3>
                 <ul class="product-card__body-list hidden-tablet-s">
                   <li class="product-card__body-item">
-                    Длина до 3 метров.
+                    Длинна до 3 метров.
                   </li>
                   <li class="product-card__body-item">
                     Углы поворота между секторами по проекту.
@@ -851,7 +868,7 @@
                   21 800
                   <svg class="product-card__body-price-currency" width="13" 
                     height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.20473 11.0319H3.25936V12.7717C3.25936 12.8564 3.28678 12.9257 3.34194 12.9799C3.39695 13.0344 3.46728 13.0616 3.55295 13.0616H5.08465C5.16414 13.0616 5.23293 13.0344 5.29103 12.9799C5.34913 12.9257 5.37809 12.8564 5.37809 12.7717V11.0319H10.0101C10.0956 11.0319 10.1659 11.005 10.2211 10.9504C10.2763 10.896 10.3037 10.8266 10.3037 10.742V9.58216C10.3037 9.498 10.2763 9.4282 10.2211 9.37404C10.1661 9.31952 10.0956 9.29226 10.0101 9.29226H5.37794V8.22305H8.49652C9.71943 8.22305 10.7175 7.85495 11.4913 7.11771C12.2647 6.38123 12.6516 5.42989 12.6516 4.26362C12.6516 3.09813 12.2647 2.14677 11.4913 1.40954C10.7177 0.673048 9.71941 0.304199 8.49652 0.304199H3.5528C3.46711 0.304199 3.39693 0.331433 3.34179 0.385626C3.28678 0.44012 3.25921 0.509893 3.25921 0.594071V6.29338H1.20473C1.11906 6.29338 1.04885 6.32201 0.993715 6.37938C0.938728 6.43678 0.911133 6.50472 0.911133 6.58323V7.93313C0.911133 8.01778 0.938551 8.08713 0.993715 8.1416C1.04888 8.19612 1.1189 8.22303 1.20473 8.22303H3.25936V9.29223H1.20473C1.11906 9.29223 1.04885 9.31949 0.993715 9.37401C0.938728 9.42818 0.911133 9.49783 0.911133 9.58213V10.7419C0.911133 10.8266 0.938551 10.8959 0.993715 10.9504C1.04885 11.005 1.11903 11.0319 1.20473 11.0319ZM5.37794 2.23432H8.31308C8.96118 2.23432 9.48391 2.42151 9.88151 2.79601C10.2789 3.17053 10.4777 3.65997 10.4777 4.26377C10.4777 4.86788 10.2789 5.35747 9.88151 5.73154C9.48391 6.10637 8.96115 6.29355 8.31308 6.29355H5.37794V2.23432Z" fill="#535353"/>
+                    <path d="M1.2 11.03h2.06v1.74a.28.28 0 0 0 .3.3h1.52a.3.3 0 0 0 .21-.09.27.27 0 0 0 .09-.2v-1.75H10c.09 0 .16-.02.21-.08a.28.28 0 0 0 .08-.2V9.57a.28.28 0 0 0-.29-.29H5.38V8.22H8.5c1.22 0 2.22-.37 3-1.1a3.76 3.76 0 0 0 1.15-2.86c0-1.16-.39-2.11-1.16-2.85a4.17 4.17 0 0 0-3-1.1H3.56a.29.29 0 0 0-.2.08.28.28 0 0 0-.1.2v5.7H1.2a.28.28 0 0 0-.2.09.28.28 0 0 0-.09.2v1.35a.28.28 0 0 0 .3.3h2.05v1.06H1.2a.28.28 0 0 0-.3.29v1.16a.28.28 0 0 0 .3.3Zm4.18-8.8H8.3c.65 0 1.17.2 1.57.57.4.37.6.86.6 1.46s-.2 1.1-.6 1.47c-.4.38-.92.56-1.57.56H5.38V2.23Z" fill="#535353"/>
                   </svg>                     
                 </p>
               </div>
@@ -862,6 +879,9 @@
                 <form class="product-card__footer-form" method="" action="">
                   <button class="product-card__footer-button reset-button" 
                     type="submit">
+                    <span class="visually-hidden">
+                      Добавить в подборку
+                    </span>
                     <span class="product-card__footer-button-icon cross-icon">
                     </span>
                   </button>
@@ -876,7 +896,7 @@
                   Вт
                 </p>
                 <img class="product-card__header-image" alt="Дизайнерский
-                  светильник" src="images/new-items/1.jpg" width="256" 
+                  светильник" src="images/new-items/1.webp" width="256" 
                     height="96" loading="lazy">
               </div>
               <div class="product-card__body">
@@ -885,7 +905,7 @@
                 </h3>
                 <ul class="product-card__body-list hidden-tablet-s">
                   <li class="product-card__body-item">
-                    Длина до 3 метров.
+                    Длинна до 3 метров.
                   </li>
                   <li class="product-card__body-item">
                     Углы поворота между секторами по проекту.
@@ -898,7 +918,7 @@
                   37 900
                   <svg class="product-card__body-price-currency" width="13" 
                     height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1.20473 11.0319H3.25936V12.7717C3.25936 12.8564 3.28678 12.9257 3.34194 12.9799C3.39695 13.0344 3.46728 13.0616 3.55295 13.0616H5.08465C5.16414 13.0616 5.23293 13.0344 5.29103 12.9799C5.34913 12.9257 5.37809 12.8564 5.37809 12.7717V11.0319H10.0101C10.0956 11.0319 10.1659 11.005 10.2211 10.9504C10.2763 10.896 10.3037 10.8266 10.3037 10.742V9.58216C10.3037 9.498 10.2763 9.4282 10.2211 9.37404C10.1661 9.31952 10.0956 9.29226 10.0101 9.29226H5.37794V8.22305H8.49652C9.71943 8.22305 10.7175 7.85495 11.4913 7.11771C12.2647 6.38123 12.6516 5.42989 12.6516 4.26362C12.6516 3.09813 12.2647 2.14677 11.4913 1.40954C10.7177 0.673048 9.71941 0.304199 8.49652 0.304199H3.5528C3.46711 0.304199 3.39693 0.331433 3.34179 0.385626C3.28678 0.44012 3.25921 0.509893 3.25921 0.594071V6.29338H1.20473C1.11906 6.29338 1.04885 6.32201 0.993715 6.37938C0.938728 6.43678 0.911133 6.50472 0.911133 6.58323V7.93313C0.911133 8.01778 0.938551 8.08713 0.993715 8.1416C1.04888 8.19612 1.1189 8.22303 1.20473 8.22303H3.25936V9.29223H1.20473C1.11906 9.29223 1.04885 9.31949 0.993715 9.37401C0.938728 9.42818 0.911133 9.49783 0.911133 9.58213V10.7419C0.911133 10.8266 0.938551 10.8959 0.993715 10.9504C1.04885 11.005 1.11903 11.0319 1.20473 11.0319ZM5.37794 2.23432H8.31308C8.96118 2.23432 9.48391 2.42151 9.88151 2.79601C10.2789 3.17053 10.4777 3.65997 10.4777 4.26377C10.4777 4.86788 10.2789 5.35747 9.88151 5.73154C9.48391 6.10637 8.96115 6.29355 8.31308 6.29355H5.37794V2.23432Z" fill="#535353"/>
+                    <path d="M1.2 11.03h2.06v1.74a.28.28 0 0 0 .3.3h1.52a.3.3 0 0 0 .21-.09.27.27 0 0 0 .09-.2v-1.75H10c.09 0 .16-.02.21-.08a.28.28 0 0 0 .08-.2V9.57a.28.28 0 0 0-.29-.29H5.38V8.22H8.5c1.22 0 2.22-.37 3-1.1a3.76 3.76 0 0 0 1.15-2.86c0-1.16-.39-2.11-1.16-2.85a4.17 4.17 0 0 0-3-1.1H3.56a.29.29 0 0 0-.2.08.28.28 0 0 0-.1.2v5.7H1.2a.28.28 0 0 0-.2.09.28.28 0 0 0-.09.2v1.35a.28.28 0 0 0 .3.3h2.05v1.06H1.2a.28.28 0 0 0-.3.29v1.16a.28.28 0 0 0 .3.3Zm4.18-8.8H8.3c.65 0 1.17.2 1.57.57.4.37.6.86.6 1.46s-.2 1.1-.6 1.47c-.4.38-.92.56-1.57.56H5.38V2.23Z" fill="#535353"/>
                   </svg>                    
                 </p>
               </div>
@@ -909,6 +929,9 @@
                 <form class="product-card__footer-form" method="" action="">
                   <button class="product-card__footer-button reset-button" 
                     type="submit">
+                    <span class="visually-hidden">
+                      Добавить в подборку
+                    </span>
                     <span class="product-card__footer-button-icon cross-icon">
                     </span>
                   </button>
@@ -918,7 +941,7 @@
           </li>
         </ul>
       </div>
-      <a class="new-items__link button button--small button--light-orange" 
+      <a class="new-items__link button button--little button--light-orange" 
         href="#">
         Перейти в каталог
       </a>
@@ -1056,7 +1079,8 @@
           Остались вопросы и нужна консультация?
         </p>
         <form class="feedback__form" method="" action="">
-          <input class="feedback__form-input input reset-input" name="name" 
+          <input class="feedback__form-input input input--big-z-index 
+            reset-input" name="name" 
             placeholder="Ваше имя*" required>
           <input class="feedback__form-input input input--big-z-index 
             reset-input" name="email" 
@@ -1067,7 +1091,7 @@
             placeholder="Сообщение" required></textarea>
           </div>
           <button class="feedback__form-button button button--light-orange 
-            button--small  reset-button" type="submit">
+            button--little  reset-button" type="submit">
             Отправить
           </button>
         </form>
@@ -1082,12 +1106,12 @@
             height="42" loading="lazy">
       </a>
       <p class="footer__copyright">
-        © Technolight 2015-2021
+        ©&nbsp;Technolight 2015-2021
       </p>
       <dl class="footer__navigation">
         <div class="footer__navigation-block footer__catalog"> 
-          <dt class="footer__navigation-title">
-            <a class="footer__navigation-link">
+          <dt class="footer__navigation-title footer__catalog-title">
+            <a class="footer__navigation-link" href="#">
               Каталог товаров
             </a>
           </dt>
@@ -1134,7 +1158,7 @@
         </div>
         <div class="footer__navigation-block footer__ordering"> 
           <dt class="footer__navigation-title footer__ordering-title">
-            <a class="footer__navigation-link">
+            <a class="footer__navigation-link" href="#">
               Как заказать
             </a>
           </dt>
@@ -1171,7 +1195,7 @@
         </div>
         <div class="footer__navigation-block footer__contacts"> 
           <dt class="footer__navigation-title footer__contacts-title">
-            <a class="footer__navigation-link">
+            <a class="footer__navigation-link" href="#">
               Контакты
             </a>
           </dt>
@@ -1185,9 +1209,9 @@
                     <div class="link-icon__inner"> 
                       <svg class="footer__address-icon footer__address-icon--place
                          link-icon__inner-icon  
-                          link-icon__inner-icon--light-orange" width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 0C6.12297 0 2.96875 3.15422 2.96875 7.03125C2.96875 8.34117 3.3316 9.61953 4.01832 10.7286L9.59977 19.723C9.70668 19.8953 9.89504 20 10.0976 20C10.0992 20 10.1007 20 10.1023 20C10.3066 19.9984 10.4954 19.8905 10.6003 19.7152L16.0395 10.6336C16.6883 9.54797 17.0312 8.30231 17.0312 7.03125C17.0312 3.15422 13.877 0 10 0ZM15.0338 10.032L10.0887 18.2885L5.01434 10.1112C4.44273 9.18805 4.13281 8.12305 4.13281 7.03125C4.13281 3.80039 6.76914 1.16406 10 1.16406C13.2309 1.16406 15.8633 3.80039 15.8633 7.03125C15.8633 8.09066 15.5738 9.12844 15.0338 10.032Z" fill="#F3A800" />
-                        <path d="M10 3.51562C8.06148 3.51562 6.48438 5.09273 6.48438 7.03125C6.48438 8.95738 8.03582 10.5469 10 10.5469C11.9884 10.5469 13.5156 8.93621 13.5156 7.03125C13.5156 5.09273 11.9385 3.51562 10 3.51562ZM10 9.38281C8.7009 9.38281 7.64844 8.32684 7.64844 7.03125C7.64844 5.73891 8.70766 4.67969 10 4.67969C11.2923 4.67969 12.3477 5.73891 12.3477 7.03125C12.3477 8.30793 11.3197 9.38281 10 9.38281Z" fill="#F3A800" />
+                          link-icon__inner-icon--light-orange" width="20" 
+                            height="20" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10 0a7.04 7.04 0 0 0-7.031 7.031c0 1.31.363 2.589 1.05 3.698l5.58 8.994a.586.586 0 0 0 .499.277h.004a.586.586 0 0 0 .498-.285l5.44-9.081a7.023 7.023 0 0 0 .991-3.603A7.04 7.04 0 0 0 10 0Zm5.034 10.032-4.945 8.256-5.075-8.177a5.852 5.852 0 0 1-.881-3.08A5.88 5.88 0 0 1 10 1.164c3.23 0 5.863 2.636 5.863 5.867 0 1.06-.29 2.097-.83 3.001Z" fill="#F3A800"/><path d="M10 3.516A3.52 3.52 0 0 0 6.484 7.03 3.511 3.511 0 0 0 10 10.547a3.509 3.509 0 0 0 3.516-3.516A3.52 3.52 0 0 0 10 3.516Zm0 5.867A2.353 2.353 0 0 1 7.648 7.03 2.36 2.36 0 0 1 10 4.68a2.357 2.357 0 0 1 2.348 2.351A2.349 2.349 0 0 1 10 9.383Z"/>
                       </svg>
                       <span class="link-icon__inner-label">
                         Место магазина 
@@ -1215,9 +1239,10 @@
                     link-icon" href="mailto:info@i-lights.ru">
                     <div class="link-icon__inner">
                       <svg class="link-icon__inner-icon footer__address-icon
-                        footer__address-icon--mail" width="18" height="16" 
-                        viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5832 2.25004C14.5832 1.47087 13.9457 0.833374 13.1665 0.833374H1.83317C1.054 0.833374 0.416504 1.47087 0.416504 2.25004V10.75C0.416504 11.5292 1.054 12.1667 1.83317 12.1667H13.1665C13.9457 12.1667 14.5832 11.5292 14.5832 10.75V2.25004ZM13.1665 2.25003L7.49982 5.7917L1.83316 2.25003H13.1665ZM13.1665 10.75H1.83316V3.6667L7.49982 7.20836L13.1665 3.6667V10.75Z"/>
+                        footer__address-icon--mail" viewBox="0 0 15 13" 
+                          width="18" height="16" 
+                            xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M14.58 2.25c0-.78-.63-1.42-1.41-1.42H1.83C1.05.83.42 1.47.42 2.25v8.5c0 .78.63 1.42 1.41 1.42h11.34c.78 0 1.41-.64 1.41-1.42v-8.5Zm-1.41 0L7.5 5.79 1.83 2.25h11.34Zm0 8.5H1.83V3.67L7.5 7.2l5.67-3.54v7.08Z"/>
                       </svg> 
                       <span class="link-icon__inner-label">
                         info@i-lights.ru
@@ -1261,43 +1286,49 @@
         </li>
         <li class="mobile-overlay__item mobile-overlay__item--relative-left 
           link-icon">
-          <a class="mobile-overlay__link link-icon__inner" 
-            href="#">
+          <a class="mobile-overlay__link link-icon__inner 
+            mobile-overlay__link--big" href="#">
             <span class="link-icon__inner-label  
-            link-icon__inner-label--light-yellow
-            link-icon__inner-label--bold">Подборка</span>
+            link-icon__inner-label--light-yellow">
+              Подборка
+            </span>
             <span class="mobile-overlay__link-icon link-icon__inner-icon 
-              link-icon__inner-icon--bg cross-button">
+              link-icon__inner-icon--hover-bg cross-button">
               <span class="cross-icon cross-icon--very-little"></span>
             </span>
           </a>
         </li>
       </ul>
       <address class="mobile-overlay__contacts visible-mobile">
-        <a class="mobile-overlay__contacts-email link-icon" 
-          href="mailto:info@i-lights.ru">
-          <div class="mobile-overlay__contacts-wrapper link-icon__inner">
-            <svg class="link-icon__inner-icon" width="15" height="13" 
-                  viewBox="0 0 15 13" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5832 2.25004C14.5832 1.47087 13.9457 0.833374 13.1665 0.833374H1.83317C1.054 0.833374 0.416504 1.47087 0.416504 2.25004V10.75C0.416504 11.5292 1.054 12.1667 1.83317 12.1667H13.1665C13.9457 12.1667 14.5832 11.5292 14.5832 10.75V2.25004ZM13.1665 2.25003L7.49982 5.7917L1.83316 2.25003H13.1665ZM13.1665 10.75H1.83316V3.6667L7.49982 7.20836L13.1665 3.6667V10.75Z"/>
-            </svg>            
-            <span class="link-icon__inner-label">info@i-lights.ru</span>   
-          </div>
-        </a>
-        <a class="mobile-overlay__contacts-tel link-icon button button--small
-        button--small-pd button--dark-blue" href="tel:+74952335557">
-          <div class="mobile-overlay__contacts-wrapper link-icon__inner">
-            <svg class="link-icon__inner-icon 
-              link-icon__inner-icon--stroke" width="16" height="16" 
-                viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0.799805 2.33338C0.799805 1.92672 0.961349 1.53671.24891 1.24915C1.53646 0.961593 1.92648 0.800049 2.33314 0.800049H4.8478C5.00864 0.800169 5.16537 0.850873 5.29581 0.944985C5.42624 1.0391 5.52378 1.17185 5.5746 1.32445L6.72307 4.76908C6.78126 4.94414 6.77438 5.13431 6.70369 5.30471C6.633 5.4751 6.50323 5.6143 6.3382 5.69674L4.60784 6.56308C5.45601 8.44029 6.95956 9.94381 8.83676 10.792L9.70308 9.06165C9.78556 8.89661 9.92476 8.76685 10.0952 8.69613C10.2656 8.62549 10.4557 8.61861 10.6308 8.67677L14.0754 9.82525C14.2281 9.87613 14.361 9.97373 14.4551 10.1044C14.5492 10.2349 14.5998 10.3918 14.5998 10.5528V13.0667C14.5998 13.4734 14.4383 13.8634 14.1507 14.1509C13.8632 14.4385 13.4732 14.6 13.0664 14.6H12.2998C5.94874 14.6 0.799805 9.45109 0.799805 3.10005V2.33338Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="link-icon__inner-label 
-              link-icon__inner-label--bold">
-              +7 (495) 233 55 57
-            </span>
-          </div>
-        </a>
+        <ul class="mobile-overlay__contacts-list">
+          <li class="mobile-overlay__contacts-item">
+            <a class="mobile-overlay__email link-icon" 
+            href="mailto:info@i-lights.ru">
+            <div class="mobile-overlay__email-inner link-icon__inner">
+              <svg class="link-icon__inner-icon" width="15" height="13" 
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.58 2.25c0-.78-.63-1.42-1.41-1.42H1.83C1.05.83.42 1.47.42 2.25v8.5c0 .78.63 1.42 1.41 1.42h11.34c.78 0 1.41-.64 1.41-1.42v-8.5Zm-1.41 0L7.5 5.79 1.83 2.25h11.34Zm0 8.5H1.83V3.67L7.5 7.2l5.67-3.54v7.08Z"/>              
+              </svg>            
+              <span class="link-icon__inner-label">info@i-lights.ru</span>   
+            </div>
+            </a>
+          </li>
+          <li class="mobile-overlay__contacts-item">
+            <a class="mobile-overlay__tel link-icon button button--little
+            button--little-pd button--dark-blue" href="tel:+74952335557">
+              <div class="mobile-overlay__tel-inner link-icon__inner">
+                <svg class="link-icon__inner-icon 
+                  link-icon__inner-icon--stroke" width="16" height="16" 
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#a)"><path d="M.8 2.33A1.53 1.53 0 0 1 2.33.8h2.52a.77.77 0 0 1 .72.52l1.15 3.45a.77.77 0 0 1-.38.93l-1.73.86a8.47 8.47 0 0 0 4.23 4.23l.86-1.73a.77.77 0 0 1 .93-.38l3.45 1.15a.77.77 0 0 1 .52.72v2.52a1.53 1.53 0 0 1-1.53 1.53h-.77A11.5 11.5 0 0 1 .8 3.1v-.77Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="a"><path d="M0 0h16v16H0z"/></clipPath></defs>
+                </svg>
+                <span class="link-icon__inner-label">
+                  +7 (495) 233 55 57
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
       </address>
     </div>
   </dialog>

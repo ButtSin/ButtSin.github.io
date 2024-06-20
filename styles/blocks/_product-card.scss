@@ -1,5 +1,5 @@
 .product-card {
-  --productCardWattsHeigth: 31px;
+  --productCardWattsMinHeigth: 31px;
   --productCardImageHeight: 246px;
   --productCardFooterHeight: 55px;
   --productCardPaddingInline: 22px;
@@ -9,7 +9,7 @@
   display: grid;
   grid-template-rows: var(--productCardImageHeight) 1fr auto;
   height: 100%;
-  padding-top: var(--productCardWattsHeigth);
+  padding-top: var(--productCardWattsMinHeigth);
 
   border: var(--border-grey);
 
@@ -32,13 +32,13 @@
   }
 
   @include tablet {
-    --productCardWattsHeigth: 25px;
+    --productCardWattsMinHeigth: 25px;
     --productCardPaddingInline: 18px;
     --productCardImageHeight: 200px;
   }
 
   @include mobile {
-    --productCardWattsHeigth: 20px;
+    --productCardWattsMinHeigth: 20px;
     --productCardPaddingInline: 16px;
     --productCardImageHeight: 125px;
   }
@@ -57,7 +57,7 @@
       align-items: center;
       justify-content: center;
       min-width: 50px;
-      min-height: var(--productCardWattsHeigth);
+      min-height: var(--productCardWattsMinHeigth);
       padding: 4px 15px;
 
       font-weight: 600;
@@ -73,7 +73,10 @@
       }
 
       @include mobile {
-        min-width: 36px;
+        top:-1.5px;
+
+        min-width: 35.5px;
+        --productCardWattsMinHeigth: 0px;
         padding: 0;
       }
     }
@@ -94,9 +97,11 @@
 
     @include mobile {
       --productCardPaddingInline: 8px;
+      margin-left: 1.5px;
     }
 
     &-title {
+      margin-left: -2px;
       margin-bottom: 15px;
 
       line-height: 1.6;
@@ -106,9 +111,12 @@
       }
 
       @include mobile {
+        position: relative;
+        bottom: 1px;
+
         margin-bottom: 16px;
+
         line-height: 1.62;
-        
         @include setRem(11);
       }
     }
@@ -134,13 +142,13 @@
 
         border-radius: 50%;
         background-color: var(--color-light-orange);
-
       }
     }
 
     &-price {
       width: fit-content;
-      margin-bottom: 5px;
+      margin-left: -2px;
+      margin-bottom: 6px;
 
       @include setRem(20);
 
@@ -153,6 +161,8 @@
       }
 
       @include mobile {
+        margin-left: -1px;
+        
         @include setRem(14);
       }
 
@@ -168,6 +178,8 @@
         }
 
         @include mobile {
+          left: 1.5px;
+
           width: 10px;
           height: 9px;
         }
@@ -201,6 +213,9 @@
       border-radius: var(--border-radius-bottom-left);
 
       @include mobile {
+        --productCardFooterHeight: 38px;
+        bottom: 0;
+
         @include setRem(12);
       }
     }

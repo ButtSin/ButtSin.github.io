@@ -12,18 +12,34 @@
   }
   
   &__header {
-    margin-bottom: 44px;
+    margin-bottom: 44.5px;
 
     @include desktop {
       margin-bottom: 40px;
     }
 
     @include tablet {
-      margin-bottom: 35px;
+      margin-bottom: 36px;
     }
 
     @include mobile {
-      margin-bottom: 25px;
+      margin-bottom: 26.5px;
+    }
+
+    &-title {
+      left: -3px;
+
+      letter-spacing: var(--letter-spacing);
+
+      &::after {
+        left: 3px;
+      }
+
+      @include mobile {
+        bottom: -1px;
+
+        letter-spacing: var(--letter-spacing-little);
+      }
     }
   }
 
@@ -40,7 +56,7 @@
     }
 
     @include mobile {
-      margin-top: 41px;
+      margin-top: 39px;
     }
   }
 }

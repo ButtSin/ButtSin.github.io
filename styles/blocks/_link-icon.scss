@@ -3,7 +3,7 @@
   
   @include hover(innerElements) {
     .link-icon__inner-label {
-      color: var(--color-blue);
+      color: var(--color-light-orange);
     }
 
     .link-icon__inner-icon {
@@ -15,7 +15,7 @@
       stroke: var(--color-blue);
     }
 
-    .link-icon__inner-icon--bg {
+    .link-icon__inner-icon--hover-bg {
       fill: none;
       stroke: none;
       background-color: var(--color-blue);
@@ -33,22 +33,6 @@
     column-gap: var(--linkIconInnerGap);
   
     fill: var(--color-light-orange);
-
-    &--large-gap {  
-      column-gap: 17px;
-
-      @include desktop {
-        column-gap: var(--linkIconInnerGap);
-      }
-    }
-
-    &--middle-gap {
-      column-gap: 13px;
-
-      @include desktop {
-        column-gap: var(--linkIconInnerGap);
-      }
-    }
 
     &-icon {
       fill: var(--color-light-orange);
@@ -72,10 +56,6 @@
 
       &--light-yellow {
         color: var(--color-light-orange);
-      }
-
-      &--bold {
-        font-weight: 700;
       }
     }
   }

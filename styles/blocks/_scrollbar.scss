@@ -3,7 +3,6 @@
 
   &:focus-visible {
     outline: var(--outline);
-    outline-offset: 0; //Для хрома, у которого он увеличивается
   }
 
   @supports not selector(::-webkit-scrollbar) {

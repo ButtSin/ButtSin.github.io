@@ -1,5 +1,5 @@
 .services {
-  margin-bottom: 93px;
+  margin-bottom: 91px;
 
   @include desktop {
     margin-bottom: 83px;
@@ -10,17 +10,23 @@
   }
 
   @include mobile {
-    margin-bottom: 45px;
+    margin-bottom: 41px;
   }
 
   &__title {
     padding-block: 20px 15px;
 
-    line-height: 157%;
+    line-height: 1.57;
+
+    @include mobile {
+      margin-bottom: 1px;
+    }
   }
   
   &__header {
-    margin-bottom: 48px;
+    margin-bottom: 44px;
+
+    letter-spacing: var(--letter-spacing-big);
 
     @include tablet {
       margin-bottom: 28px;
@@ -31,16 +37,29 @@
     }
 
     @include mobile {
-      margin-bottom: 10px;
+      margin-bottom: 7px;
+    }
+
+    &-title {
+      left: 2px;
+
+      &::after {
+        top: 20px;
+        left: -2px;
+      }
+
+      @include tablet-s {
+        left: -3px;
+        letter-spacing: var(--letter-spacing);
+      }
     }
   }
 
   &__item {
-    --servicesItemAfterHeigth: 40px;
-
     position: relative;
 
     margin-left: 128px;
+    --servicesItemAfterHeigth: 40px;
 
     border-bottom: 1px solid var(--color-light-grey);
 
@@ -67,8 +86,8 @@
     }
 
     &:first-child {
-      .services__title {
-        padding-top: 20px;
+      .services__accordion-header {
+        padding-top: 25px;
       }
     }
 
@@ -86,7 +105,10 @@
   &__accordion {
     &[open] {
       .services__accordion-header {
+        margin-left: 1px;
         padding-bottom: 15px;
+
+        letter-spacing: var(--letter-spacing-very-little);
       }
 
       .services__accordion-indicator {
@@ -104,7 +126,7 @@
     &-header {
       display: flex;
       justify-content: space-between;
-      padding: 23px 18px 17px 0;
+      padding: 23.5px 18px 17px 0;
 
       @include setRem(16);
 
@@ -124,16 +146,13 @@
 
       @include mobile {
         padding-block: 18px;
-
-        line-height: 1.57;
       }
     }
 
     &-indicator {
       display: block;
       align-self:flex-start;
-      margin-top: 5px;
-      margin-left: 20px;
+      margin: 5px 3px 0 20px;
 
       color: var(--color-light-orange);
     }
