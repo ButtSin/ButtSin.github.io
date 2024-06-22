@@ -1,0 +1,13 @@
+.pagination {
+  --paginationColumnGap: 12px;
+
+  display: flex;
+  column-gap: var(--paginationColumnGap);
+  justify-content: center;
+  padding-left: 340px;
+
+  &__list {
+    display: flex;
+    column-gap: var(--paginationColumnGap);
+  }
+}

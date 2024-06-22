@@ -1,5 +1,4 @@
 .catalog {
-
   &__breadcrumbs {
     margin-bottom: 54px;
   }
@@ -14,11 +13,10 @@
   }
 
   &__content {
-    
     &-wrapper {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 32px;
+      margin-bottom: 19px;
     }
   }
 
@@ -51,9 +49,9 @@
     &-list {
      gap: 24px 19px;
     }
-
-    &-item {
-
-    }
+  }
+  
+  &__pagination {
+    margin-bottom: 48px;  
   }
 }

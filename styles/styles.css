@@ -1308,6 +1308,20 @@ h4, .h4 {
   scale: -1 1;
 }
 
+.pagination {
+  --paginationColumnGap: 12px;
+  display: flex;
+  -moz-column-gap: var(--paginationColumnGap);
+       column-gap: var(--paginationColumnGap);
+  justify-content: center;
+  padding-left: 340px;
+}
+.pagination__list {
+  display: flex;
+  -moz-column-gap: var(--paginationColumnGap);
+       column-gap: var(--paginationColumnGap);
+}
+
 .fade {
   position: relative;
 }
@@ -3554,7 +3568,7 @@ h4, .h4 {
 .catalog__content-wrapper {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 32px;
+  margin-bottom: 19px;
 }
 .catalog__filter {
   align-self: flex-start;
@@ -3579,4 +3593,7 @@ h4, .h4 {
 }
 .catalog__product-section-list {
   gap: 24px 19px;
+}
+.catalog__pagination {
+  margin-bottom: 48px;
 }/*# sourceMappingURL=styles.css.map */
