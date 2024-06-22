@@ -25,9 +25,19 @@
   }
 
   &-link {
-    @include hover {
+    transition-duration: var(--transition-duration);
+    
+    @include hover(itself) {
       color: var(--color-blue);
       text-decoration: underline;
     }
+
+    &:focus-within {
+      color: var(--color-blue);
+      
+      @media (hover: none) {
+        transition-duration: 0s;
+      }
+    }  
   }
 }

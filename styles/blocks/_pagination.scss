@@ -10,4 +10,17 @@
     display: flex;
     column-gap: var(--paginationColumnGap);
   }
+
+  &__button {
+    cursor: pointer;
+  }
+
+  &__link {
+    &--current {
+      font-weight: 700;
+      
+      border-color: var(--color-light-orange);
+      background-color: var(--color-light-orange);      
+    }
+  }
 }

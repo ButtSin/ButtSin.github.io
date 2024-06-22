@@ -47,6 +47,8 @@
     width: 100%;
     height: 1px;
 
+    pointer-events: none;
+
     @supports selector(::-webkit-slider-runnable-track) {
       &::-webkit-slider-runnable-track { 
         height: 1px;
@@ -68,6 +70,8 @@
         box-shadow: 0 0 4px 0 #ffc94f;
         border-radius: 50%;
         background-color: var(--color-light-orange);
+
+        pointer-events: all;
       }
      
       &:focus-visible::-webkit-slider-thumb {
@@ -98,6 +102,8 @@
       box-shadow: 0 0 4px 0 #ffc94f;
       border-radius: 50%;
       background-color: var(--color-light-orange);
+
+      pointer-events: all;
     }
 
     &:focus-visible::-moz-range-thumb {

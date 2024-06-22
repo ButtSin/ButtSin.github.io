@@ -106,7 +106,8 @@
       </ul>
     </div>
     <h1 class="catalog__title container h2">Каталог</h1>
-    <section class="section container filter-navigation">
+    <section class="section container catalog__filter-navigation 
+      filter-navigation">
       <header class="section__header filter-navigation__header">
         <h2 class="section__header-title filter-navigation__header-title 
           visually-hidden">
@@ -114,7 +115,7 @@
         </h2>
       </header>
       <form class="section__body filter-navigation__body" action="" method="">
-        <ul class="filter-navigation__list">
+        <ul class="filter-navigation__list scrollbar">
           <li class="filter-navigation__item">
             <button class="filter-navigation__button button button--light 
               reset-button shadow shadow--bottom-light" type="submit" 
@@ -731,9 +732,10 @@
         </section>
       </div>
     </div>
-    <div class="catalog__pagination pagination container">
-      <button class="pagination-button reset-button" type="button">
-        <span class="visually-hidden">Предыдущий слайд</span>
+    <div class="catalog__pagination pagination hidden-tablet-s container">
+      <button class="pagination__button pagination-button reset-button" 
+        type="button">
+        <span class="visually-hidden">Предыдущая страница</span>
         <svg class="slider__button-icon pagination-button__icon" 
           width="7" height="11" fill="none" 
           xmlns="http://www.w3.org/2000/svg">
@@ -742,8 +744,8 @@
       </button>
       <ul class="pagination__list">
         <li class="pagintaion__item">
-          <a class="pagintaion__link pagination-button current-link 
-            current-link--pagination" href="#">
+          <a class="pagintaion__link pagination__link--current 
+            pagination-button pagination-button--current">
             5
           </a>
         </li>
@@ -758,8 +760,9 @@
           </a>
         </li>
       </ul>
-      <button class="pagination-button reset-button" type="button">
-      <span class="visually-hidden">Следующий слайд</span>
+      <button class="pagination__button pagination-button reset-button" 
+        type="button" disabled>
+      <span class="visually-hidden">Следующая страница</span>
       <svg class="slider__button-icon pagination-button__icon
       pagination-button__icon--to-right" 
         width="7" height="11" fill="none" 

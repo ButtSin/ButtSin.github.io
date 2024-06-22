@@ -1,15 +1,28 @@
 .filter-navigation {
-  margin-bottom: 32px;
-
   &__list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+
+    @include tablet-s {
+      flex-wrap: nowrap;
+      padding-bottom: 10px;
+      gap: 11px;
+
+      overflow-x: scroll;
+    }
   }
 
   &__button {
-    width: auto;
+    width: max-content;
     --button-height: 38px;
     padding: 10px 21px;
+
+    @include tablet-s {
+      flex-wrap: nowrap;
+      
+      padding-inline: 14px;
+      padding-bottom: 10px;
+    }
   }
 }

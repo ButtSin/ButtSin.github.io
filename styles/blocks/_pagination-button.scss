@@ -22,9 +22,16 @@
 
     border-color: var(--color-pale-blue);
     background-color: var(--color-pale-blue);
+  }
 
-    .pagination-button__icon {
-      filter:invert(1);
+  &:disabled {
+    color: #C4C4C4;
+
+    @include hover {
+      border-color: #ececec;
+      background-color: var(--color-light);
+
+      cursor: auto;
     }
   }
 
@@ -45,6 +52,17 @@
     @include tablet {
       width: 42px;
       height: 37px;
+    }
+  }
+
+  &--current {
+    @include hover(itself) {
+      color: var(--color-dark-gray);
+
+      border-color: var(--color-light-orange);
+      background-color: var(--color-light-orange);
+
+      user-select: none;
     }
   }
 
