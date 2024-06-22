@@ -1,0 +1,33 @@
+.breadcrumbs {
+  --breadcrumbsColumnGap: 25px;
+
+  margin-bottom: 55px;
+
+  @include setRem(12);
+  font-weight: 500;
+  color: #7c7c7c;
+
+  &-list {
+    display: flex;
+    column-gap: 24.5px;
+    margin-left: -2px;
+  }
+
+  &-item {
+    position: relative;
+
+    &:not(:last-child)::after {
+      @include abs-center;
+      left: calc(100% + var(--breadcrumbsColumnGap) / 2);
+
+      content: "-";
+    }
+  }
+
+  &-link {
+    @include hover {
+      color: var(--color-blue);
+      text-decoration: underline;
+    }
+  }
+}

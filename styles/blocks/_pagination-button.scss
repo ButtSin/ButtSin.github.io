@@ -18,6 +18,8 @@
   transition-duration: var(--transition-duration);
 
   @include hover(itself) {
+    color: var(--color-light);
+
     border-color: var(--color-pale-blue);
     background-color: var(--color-pale-blue);
 

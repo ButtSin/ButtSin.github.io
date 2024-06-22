@@ -6,8 +6,12 @@
   @include reset-button;
 }
 
-:where(.reset-input) {
-  @include reset-input;
+:where(.reset-input-text) {
+  @include reset-input-text;
+}
+
+:where(.reset-input-range) {
+  @include reset-input-range;
 }
 
 .container {

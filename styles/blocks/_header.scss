@@ -20,6 +20,10 @@
   @include mobile {
     --headerContactsContainerGap: 9px;
   }
+
+  &__mb {
+    margin-bottom: 16px;
+  }
   
   &__inner {
     display: flex;

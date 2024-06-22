@@ -1,0 +1,108 @@
+.input-range {
+  display: flex;
+  flex-direction: column;
+
+  &__label {
+    display: inline-flex;
+
+    margin-bottom: 4px;
+
+    font-weight: 600;
+  }
+
+  &__ranges { 
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 3px;
+
+    @include setRem(12);
+
+    &-min, &-max {
+      height: 12px;
+      margin-block: 3px;
+
+      font-weight: 500;
+      color: var(--color-pale-blue);
+      line-height: 1;
+
+      &:focus-visible {
+        position: relative;
+        z-index: 1;
+        
+        outline: var(--outline);
+      }
+    }
+
+    &-min {
+      width: 50px;
+    }
+
+    &-max {
+      text-align: end;
+    }
+  }
+
+  &__control {
+    order: 2;
+    width: 100%;
+    height: 1px;
+
+    @supports selector(::-webkit-slider-runnable-track) {
+      &::-webkit-slider-runnable-track { 
+        height: 1px;
+
+        background-color: var(--color-grey-alt);
+      }
+    }
+
+    @supports selector(::-webkit-slider-thumb) {
+      &::-webkit-slider-thumb {
+        position: relative;
+        z-index: 1;
+        
+        @include reset-input-range;
+        width: 13px;
+        aspect-ratio: 1;
+        margin-top: -6.5px;
+
+        box-shadow: 0 0 4px 0 #ffc94f;
+        border-radius: 50%;
+        background-color: var(--color-light-orange);
+      }
+     
+      &:focus-visible::-webkit-slider-thumb {
+        box-shadow: 0 0 4px 0 var(--color-blue);
+      }
+    }
+
+   @supports selector(::-moz-range-track) {
+    &::-moz-range-track {
+      height: 1px;
+
+      background-color: var(--color-grey-alt);
+    }
+   }
+
+   @supports selector(::-moz-range-thumb) {
+    &::-moz-range-thumb {
+      position: relative;
+      z-index: 2;
+      translate: 0 0; // Без этого свойства outline ползунка 
+      //оказывается под дорожкой
+        
+      @include reset-input-range;
+      width: 13px;
+      aspect-ratio: 1;
+
+      border: none;
+      box-shadow: 0 0 4px 0 #ffc94f;
+      border-radius: 50%;
+      background-color: var(--color-light-orange);
+    }
+
+    &:focus-visible::-moz-range-thumb {
+      box-shadow: 0 0 4px 0 var(--color-blue);
+    }
+   }
+  }
+}

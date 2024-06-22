@@ -25,6 +25,21 @@
     background-color: var(--color-light-orange);
   }
 
+  &--light {
+    color: var(--color-dirty-grey);
+    font-weight: 500;
+    
+    border: var(--border-grey);
+    border-radius: var(--border-radius);
+    background-color: var(--color-light);
+
+    @include hover(itself) {
+      color: var(--color-light);
+      
+      background-color: var(--color-pale-blue);
+    }
+  }
+
   &--dark-blue {
     padding: 13px 23px 14px 30px;
 

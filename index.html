@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="I-LIGHTS - Ваш надежный партнер в сфере 
-  коммерческого освещения с многолетним опытом. Мы предлагаем профессиональные 
+коммерческого освещения с многолетним опытом. Мы предлагаем профессиональные 
   светотехнические решения для магазинов, офисов и развлекательных объектов. 
   От проектирования до поставки, I-LIGHTS обеспечивает качественное освещение
   из лучших мировых и Российских брендов, улучшая атмосферу рабочих, торговых 
-  и предназначенных для отдыха пространств." />
+  и предназначенных для отдыха пространств.">
   <link href="/styles/styles.min.css" rel="stylesheet">
   <title>I-LIGHTS - Эффективные решения</title>
 </head>
@@ -16,15 +16,15 @@
   <header class="header">
     <div class="header__inner container">
       <a class="header__logo" href="#">
-        <img class="logo" src="./images/logo.png" 
+        <img class="logo" src="./images/logo.webp" 
           alt="Логотип сайта I-LIGHTS - Эффективные решения" width="75" 
             height="48">
       </a>
       <nav class="header__menu">
         <ul class="header__menu-list">
           <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link current-link" 
-              href="#">О&nbsp;компании</a>
+            <a class="header__menu-link header__menu-link" 
+              href="about-company.html">О&nbsp;компании</a>
           </li>
           <li class="header__menu-item">
             <a class="header__menu-link" href="#">Услуги</a>
@@ -288,7 +288,7 @@
           </button>
           <button class="slider__button pagination-button shadow
             pagination-button--elongated reset-button" type="button">
-            <span class="visually-hidden">Предыдущий слайд</span>
+            <span class="visually-hidden">Следующий слайд</span>
             <svg class="slider__button-icon pagination-button__icon
             pagination-button__icon--to-right" 
               width="7" height="11" fill="none" 
@@ -328,8 +328,8 @@
         </div>
       </div>
     </section>
-    <section class="section container catalog">
-      <header class="section__header catalog__header">
+    <section class="section container catalog-inner">
+      <header class="section__header catalog-inner__header">
         <h2 class="section__header-title section__header-title--little-lh 
           section__header-title--orange">
           Каталог
@@ -740,7 +740,7 @@
       <div class="section__body new-items__body">
         <ul class="new-items__list grid grid--4">
           <li class="new-items__item">
-            <article class="product-card shadow">
+            <article class="product-card">
               <div class="product-card__header">
                 <p class="product-card__header-watts">
                   Вт
@@ -790,7 +790,7 @@
             </article>
           </li>
           <li class="new-items__item">
-            <article class="product-card shadow">
+            <article class="product-card">
               <div class="product-card__header">
                 <p class="product-card__header-watts">
                   Вт
@@ -840,7 +840,7 @@
             </article>
           </li>
           <li class="new-items__item">
-            <article class="product-card shadow">
+            <article class="product-card">
               <div class="product-card__header">
                 <p class="product-card__header-watts">
                   Вт
@@ -890,7 +890,7 @@
             </article>
           </li>
           <li class="new-items__item">
-            <article class="product-card shadow">
+            <article class="product-card">
               <div class="product-card__header">
                 <p class="product-card__header-watts">
                   Вт
@@ -1079,15 +1079,15 @@
           Остались вопросы и нужна консультация?
         </p>
         <form class="feedback__form" method="" action="">
-          <input class="feedback__form-input input input--big-z-index 
-            reset-input" name="name" 
+          <input class="feedback__form-input input-text input-text--big-z-index 
+            reset-input-text" name="name" 
             placeholder="Ваше имя*" required>
-          <input class="feedback__form-input input input--big-z-index 
-            reset-input" name="email" 
+          <input class="feedback__form-input input-text input-text--big-z-index 
+            reset-input-text" name="email" 
             placeholder="Ваш e-mail*" type="email" required>
           <div class="feedback__textarea-wrapper">
-            <textarea class="feedback__textarea input input--textarea 
-              reset-input" name="message" 
+            <textarea class="feedback__textarea input-text input-text--textarea 
+              reset-input-text" name="message" 
             placeholder="Сообщение" required></textarea>
           </div>
           <button class="feedback__form-button button button--light-orange 
@@ -1100,8 +1100,8 @@
   </main>
   <footer class="footer">
     <div class="footer__inner container"> 
-      <a class="footer__logo" href="#">
-        <img class="logo footer__logo-image" src="./images/logo-white.png" 
+      <a class="footer__logo" href="index.html">
+        <img class="logo footer__logo-image" src="./images/logo-white.webp" 
           alt="Логотип сайта I-LIGHTS - Эффективные решения" width="66" 
             height="42" loading="lazy">
       </a>
@@ -1111,7 +1111,7 @@
       <dl class="footer__navigation">
         <div class="footer__navigation-block footer__catalog"> 
           <dt class="footer__navigation-title footer__catalog-title">
-            <a class="footer__navigation-link" href="#">
+            <a class="footer__navigation-link" href="catalog.html">
               Каталог товаров
             </a>
           </dt>
@@ -1320,7 +1320,7 @@
                 <svg class="link-icon__inner-icon 
                   link-icon__inner-icon--stroke" width="16" height="16" 
                     xmlns="http://www.w3.org/2000/svg">
-                    <g clip-path="url(#a)"><path d="M.8 2.33A1.53 1.53 0 0 1 2.33.8h2.52a.77.77 0 0 1 .72.52l1.15 3.45a.77.77 0 0 1-.38.93l-1.73.86a8.47 8.47 0 0 0 4.23 4.23l.86-1.73a.77.77 0 0 1 .93-.38l3.45 1.15a.77.77 0 0 1 .52.72v2.52a1.53 1.53 0 0 1-1.53 1.53h-.77A11.5 11.5 0 0 1 .8 3.1v-.77Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="a"><path d="M0 0h16v16H0z"/></clipPath></defs>
+                    <g clip-path="url(#a1)"><path d="M.8 2.33A1.53 1.53 0 0 1 2.33.8h2.52a.77.77 0 0 1 .72.52l1.15 3.45a.77.77 0 0 1-.38.93l-1.73.86a8.47 8.47 0 0 0 4.23 4.23l.86-1.73a.77.77 0 0 1 .93-.38l3.45 1.15a.77.77 0 0 1 .52.72v2.52a1.53 1.53 0 0 1-1.53 1.53h-.77A11.5 11.5 0 0 1 .8 3.1v-.77Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g><defs><clipPath id="a1"><path d="M0 0h16v16H0z"/></clipPath></defs>
                 </svg>
                 <span class="link-icon__inner-label">
                   +7 (495) 233 55 57

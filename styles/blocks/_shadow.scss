@@ -1,6 +1,6 @@
 .shadow {
   &:focus-within {
-    box-shadow: 0 4px 10px 0 rgba(243, 168, 0, 0.25);
+    box-shadow: var(--shadow-orange);
     
     transition-duration: var(--transition-duration);
 
@@ -10,6 +10,16 @@
   }
   
   @include hover(itself) {
-    box-shadow: 0 4px 10px 0 rgba(243, 168, 0, 0.25);
+    box-shadow: var(--shadow-orange);
+  }
+
+  &--bottom-light {
+    &:focus-within {
+      box-shadow: 0 0 15px 0 rgba(255, 201, 79, 0.3);
+    }
+
+    @include hover(itself) {
+      box-shadow: 0 0 15px 0 rgba(255, 201, 79, 0.3);
+    }
   }
 }

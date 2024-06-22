@@ -12,6 +12,7 @@
   padding-top: var(--productCardWattsMinHeigth);
 
   border: var(--border-grey);
+  @include shadow;
 
   transition-duration: var(--transition-duration);
 

@@ -1,0 +1,45 @@
+.filter {
+  width: 302px;
+  padding: 17.5px 26px 23px 19px;
+
+  border: var(--border-grey-alt);
+
+  &__header {
+    position: relative;
+    
+    margin-bottom: 14px;
+
+    &::after {
+      position: absolute;
+      right: 0;
+      top: 0;
+      translate: 0 44%;
+
+      content: "";
+      width: 13px;
+      height: 13px;
+      
+
+      background: url("../../images/icons/filter.svg") no-repeat right/contain;
+    }
+  }
+
+  &__list {
+    margin-left: 2px;
+    margin-bottom: 32px;
+  }
+
+  &__item {
+    margin-bottom: 26px;
+  }
+
+  &__actions {
+    display: flex;
+    column-gap: 20px;
+  }
+
+  &__button {
+   height: 31px;
+   padding-block: 15px; 
+  }
+}
