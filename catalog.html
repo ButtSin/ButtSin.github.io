@@ -3,14 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="I-LIGHTS - Ваш надежный партнер в сфере 
-  коммерческого освещения с многолетним опытом. Мы предлагаем профессиональные 
-  светотехнические решения для магазинов, офисов и развлекательных объектов. 
-  От проектирования до поставки, I-LIGHTS обеспечивает качественное освещение
-  из лучших мировых и Российских брендов, улучшая атмосферу рабочих, торговых 
-  и предназначенных для отдыха пространств.">
+  <meta name="description" content="I-LIGHTS - Ваш надежный партнер в сфере коммерческого освещения с многолетним опытом. Мы предлагаем профессиональные светотехнические решения для магазинов, офисов и развлекательных объектов. От проектирования до поставки, I-LIGHTS обеспечивает качественное освещение из лучших мировых и Российских брендов, улучшая атмосферу рабочих, торговых и предназначенных для отдыха пространств.">
   <link href="/styles/styles.min.css" rel="stylesheet">
-  <title>I-LIGHTS - Эффективные решения</title>
+  <title>Каталог I-LIGHTS - Эффективные решения</title>
 </head>
 <body>
   <header class="header header__mb">
@@ -23,7 +18,7 @@
       <nav class="header__menu">
         <ul class="header__menu-list">
           <li class="header__menu-item">
-            <a class="header__menu-link header__menu-link current-link" 
+            <a class="header__menu-link header__menu-link" 
               href="#">О&nbsp;компании</a>
           </li>
           <li class="header__menu-item">
@@ -91,7 +86,8 @@
     </div>
   </header>
   <main class="content catalog">
-    <div class="breadcrumbs container catalog__breadcrumbs">
+    <nav class="breadcrumbs container catalog__breadcrumbs" 
+      aria-label="Хлебные крошки">
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="index.html">
@@ -99,12 +95,13 @@
           </a>
         </li>
         <li class="breadcrumbs-item">
-          <a class="breadcrumbs-link" href="about-company.html">
+          <a class="breadcrumbs-link" href="about-company.html" 
+            aria-current="page">
             Каталог
           </a>
         </li>
       </ul>
-    </div>
+    </nav>
     <h1 class="catalog__title container h2">Каталог</h1>
     <section class="section container catalog__filter-navigation 
       filter-navigation">
@@ -167,91 +164,101 @@
           <h2 class="section__header-title filter__header-title h3">
             Фильтр
           </h2>
+          <button class="filter__overlay-button button button--light reset-button 
+          visible-tablet-s" type="button" aria-label="Открыть диалоговое окно с 
+            фильтром" onclick="
+              document.getElementById('filterOverlay').style.display='block';">
+            Фильтр
+          </button>
         </header>
-        <form class="section__body filter__body" action="" method="">
-          <ul class="filter__list">
-            <li class="filter__item">
-              <div class="input-range">
-                <label class="input-range__label" for="filter-power">
-                  Мощность
-                </label>
-                <input class="input-range__control reset-input-range" 
-                id="filter-power" type="range" min="44" max="432" name="power"
-                  value="200">
-                <div class="input-range__ranges">
-                  <input class="input-range__ranges-min reset-input-text" 
-                    value="44"  maxlength="5" aria-label="Минимум">
-                  <p class="input-range__ranges-max" tabindex="0">
-                    <span class="visually-hidden">Максимум</span>
-                    432
-                  </p>
-                </div>
-              </div>
-            </li>
-            <li class="filter__item">
-              <div class="input-range">
-                <label class="input-range__label" 
-                  for="filter-led-luminous-flux">
-                  Световой поток LED
-                </label>
-                <input class="input-range__control reset-input-range" 
-                id="filter-led-luminous-flux" type="range" min="6110" 
-                  max="53820" name="led-luminous-flux" value="10000">
-                <div class="input-range__ranges">
-                  <input class="input-range__ranges-min reset-input-text" 
-                    value="6110"  maxlength="5" aria-label="Минимум">
+        <form id="filterOverlay" class="section__body filter__body" action="" 
+          method="">
+          <div class="filter__body-inner">
+            <ul class="filter__list">
+              <li class="filter__item">
+                <div class="input-range">
+                  <label class="input-range__label" for="filter-power">
+                    Мощность
+                  </label>
+                  <input class="input-range__control reset-input-range" 
+                  id="filter-power" type="range" min="44" max="432" name="power"
+                    value="200">
+                  <div class="input-range__ranges">
+                    <input class="input-range__ranges-min reset-input-text" 
+                      value="44"  maxlength="3" aria-label="Минимум">
                     <p class="input-range__ranges-max" tabindex="0">
                       <span class="visually-hidden">Максимум</span>
-                      53820
+                      432
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="filter__item">
+                <div class="input-range">
+                  <label class="input-range__label" 
+                    for="filter-led-luminous-flux">
+                    Световой поток LED
+                  </label>
+                  <input class="input-range__control reset-input-range" 
+                  id="filter-led-luminous-flux" type="range" min="6110" 
+                    max="53820" name="led-luminous-flux" value="10000">
+                  <div class="input-range__ranges">
+                    <input class="input-range__ranges-min reset-input-text" 
+                      value="6110"  maxlength="5" aria-label="Минимум" 
+                        step="5">
+                      <p class="input-range__ranges-max" tabindex="0">
+                        <span class="visually-hidden">Максимум</span>
+                        53820
+                      </p>
+                  </div>
+                </div>
+              </li>
+              <li class="filter__item">
+                <div class="input-range">
+                  <label class="input-range__label" for="filter-dispersion-angle">
+                    Угол рассеивания
+                  </label>
+                  <input class="input-range__control reset-input-range" 
+                  id="filter-dispersion-angle" type="range" min="15" max="160" 
+                    name="dispersion-angle" value="40">
+                  <div class="input-range__ranges">
+                    <input class="input-range__ranges-min reset-input-text" 
+                    value="15"  maxlength="3" aria-label="Минимум">
+                    <p class="input-range__ranges-max" tabindex="0">
+                      <span class="visually-hidden">Максимум</span>
+                      160
                     </p>
                 </div>
-              </div>
-            </li>
-            <li class="filter__item">
-              <div class="input-range">
-                <label class="input-range__label" for="filter-dispersion-angle">
-                  Угол рассеивания
-                </label>
-                <input class="input-range__control reset-input-range" 
-                id="filter-dispersion-angle" type="range" min="15" max="160" 
-                  name="dispersion-angle" value="40">
-                <div class="input-range__ranges">
-                  <input class="input-range__ranges-min reset-input-text" 
-                  value="15"  maxlength="5" aria-label="Минимум">
-                  <p class="input-range__ranges-max" tabindex="0">
-                    <span class="visually-hidden">Максимум</span>
-                    160
-                  </p>
-              </div>
-            </li>
-            <li class="filter__item">
-              <div class="input-range">
-                <label class="input-range__label" for="filter-minimum-price">
-                  Минимальная цена
-                </label>
-                <input class="input-range__control reset-input-range" 
-                id="filter-minimum-price" type="range" min="2500" max="10575" 
-                  name="minimum-price" value="9000">
-                <div class="input-range__ranges">
-                  <input class="input-range__ranges-min reset-input-text" 
-                  value="2500"  maxlength="6" aria-label="Минимум">
-                  <p class="input-range__ranges-max" tabindex="0">
-                    <span class="visually-hidden">Максимум</span>
-                    100575
-                  </p>
+              </li>
+              <li class="filter__item">
+                <div class="input-range">
+                  <label class="input-range__label" for="filter-minimum-price">
+                    Минимальная цена
+                  </label>
+                  <input class="input-range__control reset-input-range" 
+                  id="filter-minimum-price" type="range" min="2500" max="10575" 
+                    name="minimum-price" value="9000">
+                  <div class="input-range__ranges">
+                    <input class="input-range__ranges-min reset-input-text" 
+                    value="2500"  maxlength="6" aria-label="Минимум">
+                    <p class="input-range__ranges-max" tabindex="0">
+                      <span class="visually-hidden">Максимум</span>
+                      100575
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </li>
-          </ul>
-          <div class="filter__actions">
-            <button class="filter__button filter__button-reset reset-button 
-            button button--light" type="reset">
-              Сбросить
-            </button>
-            <button class="filter__button filter__button-apply reset-button 
-            button button--light-orange" type="submit">
-              Применить
-            </button>
+              </li>
+            </ul>
+            <div class="filter__actions">
+              <button class="filter__button filter__button-reset reset-button 
+              button button--light" type="reset">
+                Сбросить
+              </button>
+              <button class="filter__button filter__button-apply reset-button 
+              button button--light-orange" type="submit">
+                Применить
+              </button>
+            </div>
           </div>
         </form>
       </section>
@@ -266,57 +273,7 @@
           <div class="section__body">
             <ul class="catalog__product-section-list grid grid--3">
               <li class="catalog__product-section-item">
-                <article class="product-card">
-                  <div class="product-card__header">
-                    <p class="product-card__header-watts">
-                      Вт
-                    </p>
-                    <img class="product-card__header-image" alt="Дизайнерский
-                      светильник" src="images/new-items/1.webp" width="256" 
-                        height="96" loading="lazy">
-                  </div>
-                  <div class="product-card__body">
-                    <h3 class="product-card__body-title h4">
-                      Дизайнерский светильник, изготавливаемый по проекту
-                    </h3>
-                    <ul class="product-card__body-list hidden-tablet-s">
-                      <li class="product-card__body-item">
-                        Длинна до 3 метров.
-                      </li>
-                      <li class="product-card__body-item">
-                        Углы поворота между секторами по проекту.
-                      </li>
-                      <li class="product-card__body-item">
-                        Мощность рассчитывается индивидуально.
-                      </li>
-                    </ul>
-                    <p class="product-card__body-price">
-                      21 300
-                      <svg class="product-card__body-price-currency" width="13" 
-                        height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M1.2 11.03h2.06v1.74a.28.28 0 0 0 .3.3h1.52a.3.3 0 0 0 .21-.09.27.27 0 0 0 .09-.2v-1.75H10c.09 0 .16-.02.21-.08a.28.28 0 0 0 .08-.2V9.57a.28.28 0 0 0-.29-.29H5.38V8.22H8.5c1.22 0 2.22-.37 3-1.1a3.76 3.76 0 0 0 1.15-2.86c0-1.16-.39-2.11-1.16-2.85a4.17 4.17 0 0 0-3-1.1H3.56a.29.29 0 0 0-.2.08.28.28 0 0 0-.1.2v5.7H1.2a.28.28 0 0 0-.2.09.28.28 0 0 0-.09.2v1.35a.28.28 0 0 0 .3.3h2.05v1.06H1.2a.28.28 0 0 0-.3.29v1.16a.28.28 0 0 0 .3.3Zm4.18-8.8H8.3c.65 0 1.17.2 1.57.57.4.37.6.86.6 1.46s-.2 1.1-.6 1.47c-.4.38-.92.56-1.57.56H5.38V2.23Z" fill="#535353"/>
-                      </svg>                     
-                    </p>
-                  </div>
-                  <div class="product-card__footer">
-                    <a class="product-card__footer-link button" href="#">
-                      Подробнее
-                    </a>
-                    <form class="product-card__footer-form" method="" action="">
-                      <button class="product-card__footer-button reset-button" 
-                        type="submit">
-                        <span class="visually-hidden">
-                          Добавить в подборку
-                        </span>
-                        <span class="product-card__footer-button-icon cross-icon">
-                        </span>
-                      </button>
-                    </form>
-                  </div>
-                </article>
-              </li>
-              <li class="catalog__product-section-item">
-                <article class="product-card">
+                <article class="product-card product-card--elongated">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
@@ -366,7 +323,57 @@
                 </article>
               </li>
               <li class="catalog__product-section-item">
-                <article class="product-card">
+                <article class="product-card product-card--elongated">
+                  <div class="product-card__header">
+                    <p class="product-card__header-watts">
+                      Вт
+                    </p>
+                    <img class="product-card__header-image" alt="Дизайнерский
+                      светильник" src="images/new-items/1.webp" width="256" 
+                        height="96" loading="lazy">
+                  </div>
+                  <div class="product-card__body">
+                    <h3 class="product-card__body-title h4">
+                      Дизайнерский светильник, изготавливаемый по проекту
+                    </h3>
+                    <ul class="product-card__body-list hidden-tablet-s">
+                      <li class="product-card__body-item">
+                        Длинна до 3 метров.
+                      </li>
+                      <li class="product-card__body-item">
+                        Углы поворота между секторами по проекту.
+                      </li>
+                      <li class="product-card__body-item">
+                        Мощность рассчитывается индивидуально.
+                      </li>
+                    </ul>
+                    <p class="product-card__body-price">
+                      21 300
+                      <svg class="product-card__body-price-currency" width="13" 
+                        height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1.2 11.03h2.06v1.74a.28.28 0 0 0 .3.3h1.52a.3.3 0 0 0 .21-.09.27.27 0 0 0 .09-.2v-1.75H10c.09 0 .16-.02.21-.08a.28.28 0 0 0 .08-.2V9.57a.28.28 0 0 0-.29-.29H5.38V8.22H8.5c1.22 0 2.22-.37 3-1.1a3.76 3.76 0 0 0 1.15-2.86c0-1.16-.39-2.11-1.16-2.85a4.17 4.17 0 0 0-3-1.1H3.56a.29.29 0 0 0-.2.08.28.28 0 0 0-.1.2v5.7H1.2a.28.28 0 0 0-.2.09.28.28 0 0 0-.09.2v1.35a.28.28 0 0 0 .3.3h2.05v1.06H1.2a.28.28 0 0 0-.3.29v1.16a.28.28 0 0 0 .3.3Zm4.18-8.8H8.3c.65 0 1.17.2 1.57.57.4.37.6.86.6 1.46s-.2 1.1-.6 1.47c-.4.38-.92.56-1.57.56H5.38V2.23Z" fill="#535353"/>
+                      </svg>                     
+                    </p>
+                  </div>
+                  <div class="product-card__footer">
+                    <a class="product-card__footer-link button" href="#">
+                      Подробнее
+                    </a>
+                    <form class="product-card__footer-form" method="" action="">
+                      <button class="product-card__footer-button reset-button" 
+                        type="submit">
+                        <span class="visually-hidden">
+                          Добавить в подборку
+                        </span>
+                        <span class="product-card__footer-button-icon cross-icon">
+                        </span>
+                      </button>
+                    </form>
+                  </div>
+                </article>
+              </li>
+              <li class="catalog__product-section-item">
+                <article class="product-card product-card--elongated">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
@@ -428,7 +435,7 @@
           <div class="section__body">
             <ul class="catalog__product-section-list grid grid--3">
               <li class="catalog__product-section-item">
-                <article class="product-card">
+                <article class="product-card product-card--elongated">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
@@ -478,7 +485,7 @@
                 </article>
               </li>
               <li class="catalog__product-section-item">
-                <article class="product-card">
+                <article class="product-card product-card--elongated">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
@@ -528,7 +535,7 @@
                 </article>
               </li>
               <li class="catalog__product-section-item">
-                <article class="product-card">
+                <article class="product-card product-card--elongated">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
@@ -578,7 +585,7 @@
                 </article>
               </li>
               <li class="catalog__product-section-item">
-                <article class="product-card">
+                <article class="product-card product-card--elongated">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
@@ -628,7 +635,7 @@
                 </article>
               </li>
               <li class="catalog__product-section-item">
-                <article class="product-card">
+                <article class="product-card product-card--elongated">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
@@ -678,7 +685,7 @@
                 </article>
               </li>
               <li class="catalog__product-section-item">
-                <article class="product-card">
+                <article class="product-card product-card--elongated">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
@@ -743,19 +750,19 @@
         </svg>
       </button>
       <ul class="pagination__list">
-        <li class="pagintaion__item">
-          <a class="pagintaion__link pagination__link--current 
+        <li class="pagination__item">
+          <a class="pagination__link pagination__link--current 
             pagination-button pagination-button--current">
             5
           </a>
         </li>
-        <li class="pagintaion__item">
-          <a class="pagintaion__link pagination-button" href="#">
+        <li class="pagination__item">
+          <a class="pagination__link pagination-button" href="#">
             6
           </a>
         </li>
-        <li class="pagintaion__item">
-          <a class="pagintaion__link pagination-button" href="#">
+        <li class="pagination__item">
+          <a class="pagination__link pagination-button" href="#">
             7
           </a>
         </li>
@@ -780,7 +787,8 @@
             height="42" loading="lazy">
       </a>
       <p class="footer__copyright">
-        ©&nbsp;Technolight 2015-2021
+        ©&nbsp;Technolight
+        <time datetime="2015-01-01/2021-12-31">2015-2021</time>
       </p>
       <dl class="footer__navigation">
         <div class="footer__navigation-block footer__catalog"> 
@@ -942,7 +950,7 @@
     <div class="mobile-overlay__body">
       <ul class="mobile-overlay__list">
         <li class="mobile-overlay__item">
-          <a class="mobile-overlay__link current-link" href="#">
+          <a class="mobile-overlay__link" href="#">
             О&nbsp;компании
           </a>
         </li>

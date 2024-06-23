@@ -84,14 +84,13 @@
       position: relative;
 
       text-decoration-skip-ink: none;
-      box-shadow: inset 0 -0.5px transparent;
+      text-decoration-color: var(--color-light-orange);
 
       transition-duration: var(--transition-duration);
 
       &:focus-visible {
         color: var(--color-light-orange);
 
-        box-shadow: inset 0 -0.5px var(--color-light-orange);
         
         @media (hover: none) {
           transition-duration: 0s;
@@ -100,8 +99,9 @@
 
       @include hover(itself) {
         color: var(--color-light-orange);
-
-        box-shadow: inset 0 -0.5px var(--color-light-orange);
+        text-decoration: underline;
+        text-underline-offset: 2px;
+        text-decoration-color: var(--color-light-orange);
       }
     }
 

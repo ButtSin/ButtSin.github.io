@@ -65,6 +65,10 @@
       column-gap: 15.5px;
     }
 
+    &--current-link {
+      text-shadow: 0 0 6px var(--color-light);
+    }
+
     &-icon {
       color: var(--color-dark);
     }

@@ -131,6 +131,10 @@
           column-gap: var(--headerMenuListGap);
         }
       }
+      
+      &--current-link {
+        text-shadow: 0 0 6px var(--color-light);
+      }
     }
 
     &-cross-button {

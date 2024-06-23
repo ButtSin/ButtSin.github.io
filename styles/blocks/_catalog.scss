@@ -39,12 +39,10 @@
   }
 
   &__filter {
-    padding-top: 8px;
     align-self: flex-start;
 
     @include tablet-s {
       width: 100%;
-      padding-inline: 10px 13.5px;
     }
 
     &-navigation {
@@ -59,7 +57,7 @@
   &__product-sections {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 9px;
     margin-left: 21px;
 
     @include tablet-s {
@@ -71,7 +69,7 @@
     padding-top: 15.5px;
     
     &-header {
-      margin-bottom: 14.5px;
+      margin-bottom: 15px;
     }
 
     &-title {
@@ -79,11 +77,11 @@
     }
 
     &-list {
-     gap: 24px 19px;
+     gap: 12px;
     }
   }
   
   &__pagination {
-    margin-bottom: 48px;  
+    margin-bottom: 50px;  
   }
 }

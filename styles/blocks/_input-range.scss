@@ -1,11 +1,13 @@
 .input-range {
+  --inputRangeThumbSize: 13px;
+
   display: flex;
   flex-direction: column;
 
   &__label {
     display: inline-flex;
 
-    margin-bottom: 4px;
+    margin-bottom: 10px;
 
     font-weight: 600;
   }
@@ -13,17 +15,18 @@
   &__ranges { 
     display: flex;
     justify-content: space-between;
-    margin-bottom: 3px;
+    margin-bottom: -1px;
 
     @include setRem(12);
 
     &-min, &-max {
       height: 12px;
-      margin-block: 3px;
 
       font-weight: 500;
       color: var(--color-pale-blue);
       line-height: 1;
+
+      outline-offset: -1px;
 
       &:focus-visible {
         position: relative;
@@ -43,51 +46,85 @@
   }
 
   &__control {
+    
     order: 2;
     width: 100%;
-    height: 1px;
+    height: var(--inputRangeThumbSize);
 
-    pointer-events: none;
+    cursor: auto;
 
+    &:active {
+      cursor: grabbing;
+    }
+    
     @supports selector(::-webkit-slider-runnable-track) {
+      overflow: hidden;
+
       &::-webkit-slider-runnable-track { 
         height: 1px;
-
+        
+        accent-color : red;
         background-color: var(--color-grey-alt);
       }
-    }
 
-    @supports selector(::-webkit-slider-thumb) {
       &::-webkit-slider-thumb {
         position: relative;
         z-index: 1;
         
         @include reset-input-range;
-        width: 13px;
+        width: var(--inputRangeThumbSize);
         aspect-ratio: 1;
-        margin-top: -6.5px;
+        margin-top: -6px;
 
-        box-shadow: 0 0 4px 0 #ffc94f;
+        --thumb-radius: calc((var(--thumb-height) * 0.5) - 1px);
+        --clip-top: calc((var(--thumb-height) - var(--track-height)) * 0.5 - 0.5px);
+        --clip-bottom: calc(var(--thumb-height) - var(--clip-top));
+        --clip-further: calc(100% + 1px);
+        --box-fill: calc(-100vmax - var(--thumb-width, var(--thumb-height))) 0 0
+          100vmax currentColor;
+          --thumb-height: 13px;
+          --track-height: 1px;
+          --track-color: rgba(0, 0, 0, 0.2);
+          --brightness-hover: 180%;
+          --brightness-down: 80%;
+          --clip-edges: 0px;
+        //https://codepen.io/ShadowShahriar/pen/zYPPYrQ
+
+        box-shadow: -866px 0 0 860px var(--color-light-orange);
+        clip-path: polygon(
+          100% -1px,
+          var(--clip-edges) -1px,
+          0 var(--clip-top),
+          -100vmax var(--clip-top),
+          -100vmax var(--clip-bottom),
+          0 var(--clip-bottom),
+          var(--clip-edges) 100%,
+          var(--clip-further) var(--clip-further)
+        );
         border-radius: 50%;
+        outline: 1px solid var(--color-light);
+        outline-offset: -1px;
         background-color: var(--color-light-orange);
 
-        pointer-events: all;
+        cursor: grab;
+
+        &:active {
+          cursor: grabbing;
+        }
       }
      
       &:focus-visible::-webkit-slider-thumb {
-        box-shadow: 0 0 4px 0 var(--color-blue);
+        background-color: var(--color-blue);
       }
     }
 
    @supports selector(::-moz-range-track) {
     &::-moz-range-track {
       height: 1px;
-
+      
       background-color: var(--color-grey-alt);
     }
-   }
 
-   @supports selector(::-moz-range-thumb) {
     &::-moz-range-thumb {
       position: relative;
       z-index: 2;
@@ -95,20 +132,30 @@
       //оказывается под дорожкой
         
       @include reset-input-range;
-      width: 13px;
+      width: var(--inputRangeThumbSize);
       aspect-ratio: 1;
 
       border: none;
-      box-shadow: 0 0 4px 0 #ffc94f;
+      box-shadow: 0 0 4px 0 var(--color-light-orange);
       border-radius: 50%;
       background-color: var(--color-light-orange);
 
-      pointer-events: all;
+      cursor: grab;
+
+      &:active {
+        cursor: grabbing;
+      }
     }
 
     &:focus-visible::-moz-range-thumb {
       box-shadow: 0 0 4px 0 var(--color-blue);
     }
+
+    &::-moz-range-progress {
+      height: 1px;
+      
+      background-color: var(--color-light-orange);
+    } 
    }
   }
 }

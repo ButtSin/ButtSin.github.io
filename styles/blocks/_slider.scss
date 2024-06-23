@@ -43,7 +43,7 @@
   &__slide {
     display: none;
 
-    &.current-slide {
+    &--current-slide {
       display: flex;
     }
 
@@ -258,7 +258,7 @@
 
       cursor: pointer;
 
-      &.current-slide {
+      &--current-slide {
         &::after {
           content: "";
           display: flex;

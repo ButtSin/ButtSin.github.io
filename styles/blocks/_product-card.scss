@@ -16,12 +16,6 @@
 
   transition-duration: var(--transition-duration);
 
-  @include hover(innerElements) {
-    .product-card__body-price {
-      color: var(--color-light-orange);
-    }
-  }
-
   &:focus-within {
     .product-card__body-price {
       color: var(--color-light-orange);
@@ -29,6 +23,12 @@
       @media (hover: none) {
         transition-duration: 0s;
       }
+    }
+  }
+
+  @include hover(innerElements) {
+    .product-card__body-price {
+      color: var(--color-light-orange);
     }
   }
 
@@ -42,6 +42,28 @@
     --productCardWattsMinHeigth: 20px;
     --productCardPaddingInline: 16px;
     --productCardImageHeight: 125px;
+  }
+
+  &--elongated {
+    @include mobile-s {
+      padding-top: calc(var(--productCardWattsMinHeigth) + 10px);
+
+      .product-card__header {
+        height: 105px;
+        margin-block: 9px 0;
+        &-watts {
+          top: 9px;
+        }
+  
+        &-image {
+          height: 91%;
+        }
+      }
+
+      .product-card__body {
+        margin-top: -9px;
+      }
+    }
   }
 
   &__header {
