@@ -11,7 +11,7 @@
   background-color: var(--color-pale-blue);
 
   //Прописал transition-property, чтобы не анимировался outline
-  transition-property: color, background-color;
+  transition-property: color, background-color, box-shadow;
   transition-duration: var(--transition-duration);
 
   &:focus-visible {

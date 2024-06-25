@@ -26,7 +26,13 @@
   appearance: none;
 
   background: transparent;
-  cursor: pointer;
+
+  @supports selector(::-webkit-slider-runnable-track) {
+    &::-webkit-slider-runnable-track, 
+    &::-webkit-slider-thumb {
+      appearance: none;
+    }
+  }
 }
 
 @mixin shadow {

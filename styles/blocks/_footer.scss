@@ -4,6 +4,7 @@
 
   color: var(--color-light);
 
+  border-radius: var(--border-radius-top);
   background-color: var(--color-pale-blue);
 
   @include tablet-s {

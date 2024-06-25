@@ -15,6 +15,8 @@
   border-radius: var(--border-radius);
   background-color: var(--color-light);
 
+  //Прописал transition-property, чтобы не анимировался outline
+  transition-property: color, background-color, border-color, box-shadow;
   transition-duration: var(--transition-duration);
 
   @include hover(itself) {

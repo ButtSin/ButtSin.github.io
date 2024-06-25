@@ -18,6 +18,14 @@
     --button-height: 38px;
     padding: 10px 21px;
 
+    @include hover {
+      outline-offset: -1px;
+    }
+
+    &:focus-visible {
+      outline-offset: -2px;
+    }
+
     @include tablet-s {
       flex-wrap: nowrap;
       
