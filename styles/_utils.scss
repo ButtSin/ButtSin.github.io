@@ -14,6 +14,10 @@
   @include reset-input-range;
 }
 
+:where(.reset-input-number) {
+  @include reset-input-number;
+}
+
 .container {
   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
   padding-inline: var(--container-padding-x);
@@ -79,4 +83,3 @@
     display: none !important;
   }
 }
-

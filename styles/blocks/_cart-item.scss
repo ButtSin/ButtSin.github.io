@@ -1,0 +1,124 @@
+.cart-item {
+  --cartItemMarginTop: -16px;
+  display: grid;
+  grid-template-columns: 13% 36.9% 
+    25.6% 16.2% auto;
+  align-items: center;
+  padding-block: 30.5px 26px;
+
+  &__image {
+    align-self: flex-start;
+    margin-left: 18.5px;
+
+    @include tablet {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2px;
+
+    @include fluid-text(16, 12);
+    font-weight: 700;
+    line-height: 2.5;
+  }
+
+  &__wrapper {
+    align-self: flex-start;
+  }
+
+  &__description {
+    &-list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: start;
+      align-content: flex-start;
+      max-height: 80px;
+      margin-left: 3px;
+
+      letter-spacing: -0.02rem;
+
+      @include tablet {
+        max-height: 85px;
+      }
+    }
+
+    &-item {
+      display: inline-flex;
+      align-items: center;
+      line-height: 1.52;
+
+      &:nth-child(n+4) {
+        margin-left: 43px;
+      }
+
+      &:nth-child(3n+4) {
+        position: relative;
+        margin-left: 43px;
+
+        &::before {
+          position: absolute;
+
+          content: "";
+          height: 54px;
+          width: 1px;
+          translate: -18px 21px;
+
+          background-color: var(--color-grey);
+        }
+      }
+    }
+  }
+
+  &__counter { 
+    margin-top: 26px;
+    
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      height: 25px;
+      margin-bottom: 8px;
+    }
+
+    &-button {
+      width: 24px;
+      height: 25px;
+      padding: 0;
+
+      &--left {
+        border-radius: 2px 0 0 2px;
+      }
+
+      &--right {
+        border-radius: 0 2px 2px 0;
+      }
+    }
+
+    &-value {
+      width: 40px;
+      height: 100%;
+
+      text-align: center;
+      font-weight: 500;
+
+      border-block: 1px solid #c0c0c0;
+    }
+
+    &-info {
+      @include setRem(12);
+      font-weight: 400;
+    }
+  }
+
+  &__price {
+    margin-top: var(--cartItemMarginTop);
+    margin-left: 1px;
+
+    font-weight: 700;
+  }
+
+  &__delete-button {
+    margin-top: var(--cartItemMarginTop);
+  }
+}

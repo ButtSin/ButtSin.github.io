@@ -1,0 +1,29 @@
+.cart-products {
+  &__header {
+    margin-bottom: 36.5px;
+
+    &-title {
+      @include fluid-text(24, 18);
+    }
+  }
+
+  &__description {
+    margin-bottom: 15px;
+    
+    &-list {
+      display: grid;
+      grid-template-columns: minmax(auto, 167px) minmax(auto, 473px) 
+        minmax(auto, 328px) minmax(auto, 208px) auto;
+
+      letter-spacing: -0.01rem;
+    }
+
+    @include tablet-s {
+      display: none;
+    }
+  }
+
+  &__list {
+    border-bottom: var(--border-grey);
+  }
+}
