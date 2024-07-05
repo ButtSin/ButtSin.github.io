@@ -49,4 +49,13 @@
       height: 3.5px;
     }
   }
+
+  &--rotated {
+    &::after {
+      rotate: 45deg;
+    }
+    &::before {
+      rotate: -45deg;
+    }
+  }
 }

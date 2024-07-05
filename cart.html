@@ -86,7 +86,7 @@
     </div>
   </header>
   <main class="content cart">
-    <nav class="breadcrumbs container" 
+    <nav class="breadcrumbs cart__breadcrumbs container" 
       aria-label="Хлебные крошки">
       <ul class="breadcrumbs-list">
         <li class="breadcrumbs-item">
@@ -97,7 +97,7 @@
         <li class="breadcrumbs-item">
           <a class="breadcrumbs-link" href="cart.html" 
             aria-current="page">
-            Каталог
+            Подборка
           </a>
         </li>
       </ul>
@@ -124,20 +124,24 @@
               Сумма
             </li>
             <li class="cart-products__description-item">
-              Код:&nbsp;54637654
+              Код: 54637654
             </li>
           </ul>
         </div>
         <ul class="cart-products__list">
           <li class="cart-products__item">
-            <div class="cart-item shadow">
-              <img class="cart-item__image" 
-                src="./images/products/EVO L.jpg" width="98" height="98"
-                  alt="Трековый светильник EVO L">
+            <div class="cart-item cart-item--columns shadow">
+              <a class="cart-item__image-link" href="#"> 
+                <img class="cart-item__image" 
+                  src="./images/products/EVO L.jpg" width="98" height="98"
+                    alt="Трековый светильник EVO L">
+              </a>
               <div class="cart-item__wrapper">
-                <h2 class="cart-item__title">
-                  Трековый светильник EVO L
-                </h2>
+                <a class="cart-item__title-link" href="#">
+                  <h2 class="cart-item__title">
+                    Трековый светильник EVO L
+                  </h2>
+                </a>
                 <div class="cart-item__description">
                   <ul class="cart-item__description-list">
                     <li class="cart-item__description-item">
@@ -157,12 +161,6 @@
                     </li>
                     <li class="cart-item__description-item">
                       1672 LED
-                    </li>
-                    <li class="cart-item__description-item">
-                      CRI/Ra 80+
-                    </li>
-                    <li class="cart-item__description-item">
-                      85 
                     </li>
                   </ul>
                 </div>
@@ -188,36 +186,36 @@
                   Осталось 2 шт
                 </p>
               </div>
-              <div class="cart-item__price">
+              <div class="cart-item__price currency">
                 от 3 300
-                <svg class="product-card__body-price-currency" width="13" 
-                height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.2 11.03h2.06v1.74a.28.28 0 0 0 .3.3h1.52a.3.3 0 0 0 .21-.09.27.27 0 0 0 .09-.2v-1.75H10c.09 0 .16-.02.21-.08a.28.28 0 0 0 .08-.2V9.57a.28.28 0 0 0-.29-.29H5.38V8.22H8.5c1.22 0 2.22-.37 3-1.1a3.76 3.76 0 0 0 1.15-2.86c0-1.16-.39-2.11-1.16-2.85a4.17 4.17 0 0 0-3-1.1H3.56a.29.29 0 0 0-.2.08.28.28 0 0 0-.1.2v5.7H1.2a.28.28 0 0 0-.2.09.28.28 0 0 0-.09.2v1.35a.28.28 0 0 0 .3.3h2.05v1.06H1.2a.28.28 0 0 0-.3.29v1.16a.28.28 0 0 0 .3.3Zm4.18-8.8H8.3c.65 0 1.17.2 1.57.57.4.37.6.86.6 1.46s-.2 1.1-.6 1.47c-.4.38-.92.56-1.57.56H5.38V2.23Z" fill="#535353"/>
-                </svg>  
               </div>
-              <button class="cart-item__delete-button reset-button" 
-                name="delete-button" value="id" type="submit" 
-                  aria-label="Удалить товар из подборки">
-                Удалить
+              <button class="cart-item__delete-button reset-button cross-icon
+                cross-icon--rotated" name="delete-button" value="id" 
+                  type="submit" aria-label="Удалить товар из подборки">
+                <span class="hidden-mobile">Удалить</span>
               </button>
             </div>
           </li>
           <li class="cart-products__item">
             <div class="cart-item shadow">
-              <img class="cart-item__image" 
-                src="./images/products/custom lamp.jpg" width="98" height="98"
-                  alt="Дизайнерский светильник изготавливаемый по проекту">
-              <div class="cart-products__wrapper">
-                <h2 class="cart-item__title">
-                  Дизайнерский светильник изготавливаемый по проекту
-                </h2>
+              <a class="cart-item__image-link" href="#"> 
+                <img class="cart-item__image" 
+                  src="./images/products/custom lamp.jpg" width="123" height="69"
+                    alt="Дизайнерский светильник изготавливаемый по проекту">
+              </a>
+              <div class="cart-item__wrapper">
+                <a class="cart-item__title-link" href="#">
+                  <h2 class="cart-item__title">
+                    Дизайнерский светильник изготавливаемый по проекту
+                  </h2>
+                </a>
                 <div class="cart-item__description">
                   <ul class="cart-item__description-list">
                     <li class="cart-item__description-item">
                       Длинна до 3 метров. 
                     </li>
                     <li class="cart-item__description-item">
-                      Углы поворота между секторами по проекту. 
+                      Углы поворота между секторами по проекту.
                     </li>
                     <li class="cart-item__description-item">
                       Мощность рассчитывается индивидуально.
@@ -232,7 +230,7 @@
                     -
                   </button>
                   <input class="cart-item__counter-value reset-input-number" 
-                    type="number" value="1" min="1" max="10" inputmode="numeric" 
+                    type="number" value="2" min="1" max="10" inputmode="numeric" 
                       aria-labelledby="availability">
                   <button class="cart-item__counter-button reset-button button"
                     type="button"
@@ -246,17 +244,14 @@
                   В наличии
                 </p>
               </div>
-              <div class="cart-item__price">
-                от 3 300
-                <svg class="product-card__body-price-currency" width="13" 
-                height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M1.2 11.03h2.06v1.74a.28.28 0 0 0 .3.3h1.52a.3.3 0 0 0 .21-.09.27.27 0 0 0 .09-.2v-1.75H10c.09 0 .16-.02.21-.08a.28.28 0 0 0 .08-.2V9.57a.28.28 0 0 0-.29-.29H5.38V8.22H8.5c1.22 0 2.22-.37 3-1.1a3.76 3.76 0 0 0 1.15-2.86c0-1.16-.39-2.11-1.16-2.85a4.17 4.17 0 0 0-3-1.1H3.56a.29.29 0 0 0-.2.08.28.28 0 0 0-.1.2v5.7H1.2a.28.28 0 0 0-.2.09.28.28 0 0 0-.09.2v1.35a.28.28 0 0 0 .3.3h2.05v1.06H1.2a.28.28 0 0 0-.3.29v1.16a.28.28 0 0 0 .3.3Zm4.18-8.8H8.3c.65 0 1.17.2 1.57.57.4.37.6.86.6 1.46s-.2 1.1-.6 1.47c-.4.38-.92.56-1.57.56H5.38V2.23Z" fill="#535353"/>
-                </svg> 
+              <div class="cart-item__price currency">
+                <span class="hidden-mobile">от 41 500</span> <!--Не забыть удалить!-->
+                <span class="visible-mobile">от 5 500</span> <!--Не забыть удалить!-->
               </div>
-              <button class="cart-item__delete-button reset-button" 
-                name="delete-button" value="id" type="submit" 
-                  aria-label="Удалить товар из подборки">
-                Удалить
+              <button class="cart-item__delete-button reset-button  cross-icon
+                cross-icon--rotated"  name="delete-button" value="id" 
+                  type="submit" aria-label="Удалить товар из подборки">
+                <span class="hidden-mobile">Удалить</span>
               </button>
             </div>
           </li>
@@ -265,17 +260,21 @@
           <a class="cart-products__link" href="catalog.html">
             К покупкам
           </a>
-          <p class="cart-products__price">
-            Итого: от 44 800
+          <p class="cart-products__price currency">
+            
+            <span class="hidden-mobile">от 41 500</span> <!--Не забыть удалить!-->
+            <span class="visible-mobile">от 5 500</span> <!--Не забыть удалить!-->
           </p>
         </div>
         <div class="cart-products__actions">
-          <button class="button reset-button" name="submit-to-mail" 
-            type="submit">
+          <button class="cart-products__actions-button 
+            cart-products__actions-button--dark-border button reset-button 
+              pagination-button" name="submit-to-mail" type="submit">
             Отправить подборку на почту
           </button>
-          <button class="button reset-button" name="submit-to-calculation" 
-            type="submit">
+          <button class="cart-products__actions-button button 
+            button--light-orange reset-button" name="submit-to-calculation" 
+              type="submit">
             Отправить заявку на расчет
           </button>
         </div>

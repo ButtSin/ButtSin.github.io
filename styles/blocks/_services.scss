@@ -74,9 +74,7 @@
         width: 41px;
         height: var(--servicesItemAfterHeigth);
         
-        background-image: url("/images/services/#{$i}.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
+        background: url("/images/services/#{$i}.svg") no-repeat center / contain;
 
         @include mobile {
           translate: -2% -50%;

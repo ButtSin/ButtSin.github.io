@@ -1,9 +1,39 @@
 .cart-products {
+  --cartTemplateColumns: 13% 36.9% 25.6% 16.2% 8.3%;
+  --cartTemplateRows: auto;
+
+  margin-bottom: 51px;
+
+  @include hover {
+    .cart-products__item {
+      border-color: transparent;
+    }
+  }
+
+  @include tablet {
+    --cartTemplateColumns:  25% 1fr 25%;
+    --cartTemplateRows: auto auto;
+    margin-bottom: 38px;
+  }
+
+  @include mobile {
+    --cartTemplateColumns: 24% 1fr auto;
+    margin-bottom: 28px;
+  }
+
   &__header {
     margin-bottom: 36.5px;
 
     &-title {
       @include fluid-text(24, 18);
+    }
+
+    @include tablet {
+      margin-bottom: 25px;
+    }
+
+    @include tablet-s {
+      margin-bottom: 14px;
     }
   }
 
@@ -12,18 +42,144 @@
     
     &-list {
       display: grid;
-      grid-template-columns: minmax(auto, 167px) minmax(auto, 473px) 
-        minmax(auto, 328px) minmax(auto, 208px) auto;
+      grid-template-columns: var(--cartTemplateColumns);
+      grid-template-rows: var(--cartTemplateRows);  
 
       letter-spacing: -0.01rem;
     }
 
-    @include tablet-s {
+    @include tablet {
       display: none;
     }
   }
 
   &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 34px;
+    margin-bottom: 0px;
+
+    @include tablet {
+      row-gap: 16px;
+    }
+  }
+
+  &__item {
     border-bottom: var(--border-grey);
+
+    transition-duration: var(--transition-duration);
+
+    @include mobile {
+      border-bottom: none;
+    }
+  }
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: var(--cartTemplateColumns);
+    grid-template-rows: var(--cartTemplateRows);  
+    margin-top: 26px;
+
+    @include tablet-s {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include mobile {
+      margin-top: 15px;
+
+      @include setRem(12);
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    width: fit-content;
+    padding-left: 15px;
+
+    transition-duration: var(--transition-duration);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -2px;
+      translate: 0 50%;
+
+      content: "";
+      width: 10px;
+      height: 10px;
+      
+      background: url("./../../images/icons/arrow-left.svg") no-repeat 
+        center  / contain;
+      filter: invert(70%);
+
+      transition-duration: var(--transition-duration);
+    }
+
+    @include hover(itself, before) {
+      color: var(--color-light-orange);
+
+      &::before {
+        filter: invert(20%);
+      }
+    }
+
+    @include mobile {
+      font-weight: 500;
+    }
+  }
+
+  &__price {
+    margin-right: 14px;
+    width: fit-content;
+    grid-area: 1 / -3 / 2 / -2;
+
+    &-icon {
+      margin-left: 1px;
+    }
+
+    @include tablet {
+      justify-self: left;
+      grid-area: 1 / 3 / 2 / -1;
+    }
+
+    @include mobile {
+      margin-right: 20px;
+
+      &::after {
+        top: -2px;
+        right: -5px;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 16px;
+    margin-top: 28px;
+
+    &-button {
+      width: 313px;
+
+      @include tablet {
+        width: 100%;  
+      }
+
+      &--dark-border {
+        border-color: var(--color-pale-blue);
+      }
+    }
+
+    @include tablet {
+      justify-content: space-between;
+      margin-top: 27px;
+    }
+
+    @include tablet-s {
+      flex-direction: column-reverse;
+      row-gap: 14px;
+    }
   }
 }
