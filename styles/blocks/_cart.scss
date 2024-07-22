@@ -1,5 +1,24 @@
 .cart {
   &__breadcrumbs {
-    margin-bottom: 30px;
+    margin-bottom: 55px;
+
+    @include tablet-s {
+      margin-left: 3px;
+      margin-bottom: 29px;
+    }
+  }
+
+  &__info {
+    margin-top: 20vh;
+    margin-bottom: 20vh;
+    justify-self: center;
+    align-self: center;
+
+    text-transform: uppercase;
+    text-align: center;
+
+    @include tablet-s {
+      @include setRem(12);
+    }
   }
 }

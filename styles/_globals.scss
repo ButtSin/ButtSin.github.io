@@ -1,8 +1,12 @@
 body {
+  display: flex;
+  flex-direction: column;
+
   font-family: var(--font-family-base);
   @include setRem(14);
   font-weight: 700;
   color:var(--color-dirty-grey);
+  
   background-color: #fcfcfc;
 }
 

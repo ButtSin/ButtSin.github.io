@@ -1,6 +1,4 @@
 .cart-item {
-  --cartItemMargin: 8px;
-
   display: grid;
   grid-template-columns: var(--cartTemplateColumns);
   grid-template-rows: var(--cartTemplateRows);  
@@ -24,8 +22,6 @@
   }
 
   &--columns {
-    --cartItemMargin: -8px;
-
     padding-block: 40px;
 
     @include tablet {
@@ -34,6 +30,19 @@
 
     @include mobile {
       padding-block: 26px 14px;
+    }
+
+    .cart-item__image {
+      margin: 0;
+
+      &-link {
+        margin-top: -9px;
+        margin-left: 19px;
+  
+        @include mobile {
+          margin: 0 5px 0 10px;
+        }
+      }
     }
 
     .cart-item__title {
@@ -45,25 +54,21 @@
     }
 
     .cart-item__description {
-      &-item {
-        width: fit-content;
-      }
-
       &-list {
         display: grid;
         grid-template-rows: repeat(3, 1fr);
         grid-template-columns:  auto;
         grid-auto-flow: column;
         justify-content: start;
-        margin-left: 4px;
         column-gap: 9.5%;
+        row-gap: 1px;
+        margin-left: 4px;
 
         letter-spacing: -0.02rem;
-
         white-space: nowrap;
 
         &::before {
-          bottom: -15px;
+          bottom: -13px;
           right: 5px;
         }
 
@@ -72,14 +77,24 @@
         }
 
         @include mobile {
-          column-gap: 44px;
+          column-gap: 39.5px;
           margin-left: 1px;
+        }
+      }
+
+      &-item {
+        width: fit-content;
+
+        @include mobile {
+          display: inline-flex;
+  
+          letter-spacing: 0.1px;
         }
       }
     }
 
     .cart-item__counter {
-      margin-top: 34px;
+      margin-top: 31px;
 
       @include tablet {
         justify-self: center;
@@ -89,7 +104,7 @@
       @include mobile {
         justify-self: start;
         align-self: center;
-        margin-top: 30px;
+        margin-top: 28px;
         margin-left: -2px;
       }
 
@@ -102,29 +117,38 @@
       }
     }
 
-    .cart-item__description-item {
-      @include mobile {
-        display: inline-flex;
-
-        line-height: 1.5;
-      }
-    }
-
     .cart-item__price {
+      margin-top: -10px;
+
       @include mobile {
         grid-area: 2 / 2 / 3 / 3;
         justify-self: end;
-        --cartItemMargin: 5px;
-        margin-right: 2px;
+        margin-right: -3px;
+        margin-top: 4px;
+      }
+    }
+
+    .cart-item__delete-button {
+      margin-top: -9px;
+
+      @include mobile {
+        margin-top: -6.5px;
       }
     }
   }
 
   &__image {
+    margin-top: 23px;
+    margin-left: 7px;
+
+    @include mobile {
+      margin-top: 15px;
+      margin-left: 4px;
+    }
+
     &-link {
-      align-self: flex-start;
       display: flex;
-      margin-inline: 18.5px 12px;
+      align-self: flex-start;
 
       &:focus-visible {
         outline: none;
@@ -132,10 +156,6 @@
         .cart-item__image {
           outline: var(--outline);
         }
-      }
-
-      @include mobile {
-        margin-inline: 10px 5px;
       }
     }
 
@@ -145,7 +165,8 @@
   }
 
   &__title {
-    padding-right: 20%;
+    width: fit-content;
+    margin-right: 20%;
     margin-bottom: 13px;
 
     @include setRem(16);
@@ -153,7 +174,7 @@
     line-height: 1.37;
 
     @include tablet {
-      padding-right: 20px;
+      margin-right: 20px;
       margin-block: 0 30px;
 
       @include setRem(14);
@@ -164,7 +185,7 @@
     }
 
     @include mobile {
-      padding-right: 40px;
+      margin-right: 40px;
       margin-bottom: 4.5px;
 
       line-height: 1.52;
@@ -192,9 +213,12 @@
       align-content: flex-start;
       margin-left: 1px;
       padding-right: 20px;
+
       letter-spacing: -0.025rem;
 
       @include mobile {
+        position: relative;
+
         flex-direction: row;
         flex-wrap: nowrap;
         padding-right: 50px;
@@ -202,8 +226,6 @@
 
         line-height: 1.15;
         letter-spacing: var(--letter-spacing-small);
-
-        position: relative;
 
         &::before {
           position: absolute;
@@ -265,14 +287,12 @@
     margin-top: 50px;
 
     @include tablet {
-      margin-inline: auto;
-
       grid-area:  2 / 2 / 3 / 3;
+      margin-inline: auto;
     }
 
     @include mobile {
-      margin-top: 34px;
-      margin-inline: 2px 0;
+      margin: 34px 0 0 2px;
     }
     
     &-wrapper {
@@ -282,11 +302,15 @@
       margin-bottom: 10px;
 
       @include mobile {
+        position: relative;
+
         margin-bottom: 6px;
       }
     }
 
     &-button {
+      z-index: 2;
+
       width: 24px;
       height: 25px;
       padding: 0;
@@ -298,16 +322,41 @@
       &--right {
         border-radius: 0 2px 2px 0;
       }
+
+      @include mobile {
+        &--left {
+          margin-right: 40px;
+          
+          border-radius: 2px 2px 0 0;
+        }
+  
+        &--right {
+          border-radius: 0 0 2px 2px;
+        }
+      }
     }
 
-    &-value {
+    &-value {      
       width: 40px;
       height: 100%;
+      padding-inline: 5px;
 
       text-align: center;
       font-weight: 500;
 
       border-block: 1px solid #c0c0c0;
+
+      &:focus-visible {
+        outline: var(--outline-big);
+        outline-offset: calc(-1 * var(--outline-size-big));
+      }
+
+      @include mobile {
+        position: absolute;
+        left: 22px;
+        
+        width: 44px;
+      }
     }
 
     &-info {
@@ -321,9 +370,7 @@
 
         &::before {
           position: absolute;
-          top: 0;
-          left: 0;
-          translate: -190% 90%;
+          translate: -20.5px 6.5px;
 
           content: "";
           width: 10px;
@@ -337,7 +384,7 @@
 
   &__price {
     width: fit-content;
-    margin-top: var(--cartItemMargin);
+    margin-top: 8px;
     margin-left: 1px;
 
     font-weight: 700;
@@ -348,16 +395,15 @@
     }
 
     @include tablet {
-      --cartItemMargin: 0;
       margin-right: 20px;
       grid-area: 2 / 3 / 3 / -1;
+      justify-self: right;
     }
 
     @include mobile {
       grid-area: 2 / 2 / 3 / 3;
       justify-self: end;
-      --cartItemMargin: 10px;
-      margin-right: 2px;
+      margin-right: -3.5px;
     }
   }
 
@@ -366,9 +412,10 @@
     
     width: auto;
     height: 20px;
-    padding-left: 22px;
-    margin-top: var(--cartItemMargin);
-    justify-self: flex-start;
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-right: 19px;
+    justify-self: flex-end;
 
     line-height: 1;
 
@@ -384,13 +431,36 @@
       @include setRem(12);
     }
 
-    &::before, &::after {
-      translate: -330% -1px;
+    @include mobile {
+      width: 30px;
+      height: 30px;
+      margin-right: 4.5px;
+      margin-top: -6.5px;
+    }
 
-      @include tablet {
+    &::before, &::after {
+      top: 0;
+      left: 0;
+      translate: -1px 9px;
+
+      width: 11.5px;
+      height: 2.5px;
+
+      @include desktop-s {
+        translate: 2px 9px;
+
         width: 8px;
         height: 2.5px;
-        translate: -400% -1px;
+      }
+
+      @include tablet {
+        translate: 2px 8.5px;
+      }
+
+      @include mobile {
+        top: 50%;
+        left: 50%;
+        translate: -50% -50%;
       }
     }
 
@@ -399,8 +469,6 @@
     }
 
     @include tablet {
-      --cartItemMargin: 0;
-
       grid-area: 1 / 3 / 2 / -1;
       align-self: flex-start;
       padding-left: 14px;
@@ -409,7 +477,6 @@
     @include mobile {
       grid-area: 1 / 3 / 2 / -1;
       justify-self: right;
-      margin-right: 9.5px;
       padding: 0;
 
       &::before, &::after {
