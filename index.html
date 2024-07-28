@@ -736,7 +736,7 @@
       <div class="section__body new-items__body">
         <ul class="new-items__list grid grid--4">
           <li class="new-items__item">
-            <article class="product-card">
+            <article class="product-card product-card--wide-image">
               <div class="product-card__header">
                 <p class="product-card__header-watts">
                   Вт
@@ -836,7 +836,7 @@
             </article>
           </li>
           <li class="new-items__item">
-            <article class="product-card">
+            <article class="product-card product-card--wide-image">
               <div class="product-card__header">
                 <p class="product-card__header-watts">
                   Вт
@@ -886,7 +886,7 @@
             </article>
           </li>
           <li class="new-items__item">
-            <article class="product-card">
+            <article class="product-card product-card--wide-image">
               <div class="product-card__header">
                 <p class="product-card__header-watts">
                   Вт
@@ -1257,12 +1257,14 @@
       </dl>
     </div>
   </footer>
-  <dialog class="mobile-overlay visible-tablet" id="mobileOverlay">
+  <dialog id="mobileOverlay" class="mobile-overlay visible-tablet">
     <form class="mobile-overlay__close-button-wrapper" method="dialog">
       <button class="mobile-overlay__close-button cross-button 
-        cross-button--rotated reset-button" aria-label="Закрыть навигационное
-         меню" type="submit">
+        cross-button--rotated reset-button" type="submit">
         <span class="cross-icon cross-icon--big"></span>
+        <span class="visually-hidden">
+          Закрыть навигационное меню
+        </span>
       </button>
     </form>
     <div class="mobile-overlay__body">

@@ -28,7 +28,7 @@
     &-wrapper {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 18px;
+      margin-bottom: 17.5px;
 
       @include tablet-s {
         flex-direction: column;
@@ -61,7 +61,7 @@
   &__product-sections {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
+    row-gap: 26.5px;
     margin-left: 21px;
 
     @include tablet-s {
@@ -71,10 +71,18 @@
   }
 
   &__product-section {
-    padding-top: 14.5px;
+    padding-top: 17.5px;
+
+    @include mobile {
+      padding-top: 15.5px;
+    }
     
     &-header {
       margin-bottom: 15px;
+
+      &--big-margin {
+        margin-bottom: 16px;
+      }
     }
 
     &-title {

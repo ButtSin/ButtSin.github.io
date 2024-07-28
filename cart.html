@@ -267,20 +267,148 @@
           </a>
           <p class="cart-products__price currency">
             Итого: от 888 388 828 881
-
           </p>
         </div>
         <div class="cart-products__actions">
           <button class="cart-products__actions-button 
             cart-products__actions-button--dark-border button reset-button 
-              pagination-button" name="submit-to-mail" type="submit">
+              pagination-button" type="button" 
+                onclick="modalMail.showModal()">
             Отправить подборку на почту
           </button>
           <button class="cart-products__actions-button button 
-            button--light-orange reset-button" name="submit-to-calculation" 
-              type="submit">
+            button--light-orange reset-button" type="button" 
+              onclick="modalСalculation.showModal()">
             Отправить заявку на расчет
-          </button>
+          </button> 
+        </div>
+        <div class="cart-products__modals">
+          <dialog id="modalMail" class="modal modal--little"
+            aria-labelledby="modalMailtitle">
+            <button class="modal__close-button cross-button 
+              cross-button--rotated reset-button" type="button" 
+                onclick="modalMail.close()">
+              <span class="modal__close-button-icon cross-icon 
+                cross-icon--big"></span>
+              <span class="visually-hidden">
+                Закрыть диалоговое окно отправки подборки на почту
+              </span>
+            </button>
+            <div class="modal__wrapper">
+              <strong id="modalMailtitle" class="modal__wrapper-description">
+                Введите адрес электронной почты
+              </strong>
+              <input class="modal__wrapper-input input-text 
+                input-text--big-z-index reset-input-text" name="email" 
+                  placeholder="Ваш e-mail*" type="email" required>
+              <label class="modal__wrapper-input-checkbox input-checkbox">
+                <input class="modal__wrapper-input input-checkbox__default 
+                  visually-hidden" type="checkbox" 
+                    name="personal-data-processing">
+                <span class="input-checkbox__indicator"></span>
+                <span class="input-checkbox__text">
+                  Даю согласие на
+                    <strong class="input-checkbox__text--underline">
+                      обработку персональных данных
+                    </strong>
+                </span>
+              </label>
+              <button class="modal__button-submit button 
+                button--light-orange reset-button" type="submit">
+                Отправить
+            </button>   
+            </div>
+          </dialog>  
+          <dialog id="modalСalculation" class="modal" 
+            aria-labelledby="modalСalculationTitle">
+            <button class="modal__close-button cross-button 
+              cross-button--rotated reset-button" type="button" 
+                onclick="modalСalculation.close()">
+              <span class="modal__close-button-icon cross-icon 
+                cross-icon--big"></span>
+              <span class="visually-hidden">
+                Закрыть диалоговое окно отправки заявки на расчёт
+              </span>
+            </button>
+            <div class="modal__wrapper">
+              <strong id="modalСalculationTitle" 
+                class="modal__wrapper-description">
+                Введите следующие данные
+              </strong>
+              <input class="modal__wrapper-input input-text 
+                input-text--big-z-index reset-input-text" name="name" 
+                  placeholder="Ваше имя*" required>
+              <input class="modal__wrapper-input input-text 
+                input-text--big-z-index reset-input-text" name="email" 
+                  placeholder="Ваш e-mail*" type="email" required>
+              <input class="modal__wrapper-input input-text 
+                input-text--big-z-index reset-input-text" name="tel" 
+                  placeholder="Ваш телефон*" type="tel" required>
+              <label class="modal__wrapper-input-checkbox input-checkbox">
+                <input class="modal__wrapper-input input-checkbox__default 
+                  visually-hidden" type="checkbox" 
+                    name="personal-data-processing">
+                <span class="input-checkbox__indicator"></span>
+                <span class="input-checkbox__text">
+                  Даю согласие на
+                    <strong class="input-checkbox__text--underline">
+                      обработку персональных данных
+                    </strong>
+                </span>
+              </label>
+              <button class="modal__button-submit button 
+                button--light-orange reset-button" type="submit">
+                Отправить
+              </button>   
+            </div>
+          </dialog>
+          <dialog id="modalThanks" class="modal modal--text-thanks"
+            aria-label="Спасибо!">
+            <button class="modal__close-button cross-button 
+              cross-button--rotated reset-button" type="button" 
+                onclick="modalThanks.close()">
+              <span class="modal__close-button-icon cross-icon 
+                cross-icon--big"></span>
+              <span class="visually-hidden">
+                Закрыть диалоговое окно
+              </span>
+            </button>
+            <div class="modal__wrapper">
+              <p class="modal__wrapper-description">
+                Спасибо!
+                <strong class="modal__wrapper-description
+                  modal__wrapper-description--very-little">
+                  Выша заявка принята, в ближайшее время наш менеджер с Вами
+                  свяжется.
+                </strong> 
+              </p>
+            </div>
+          </dialog>
+          <dialog id="modalThanksMail" class="modal modal--text-thanks-mail"
+            aria-label="Спасибо!">
+            <button class="modal__close-button cross-button 
+              cross-button--rotated reset-button" type="button" 
+                onclick="modalThanksMail.close()">
+              <span class="modal__close-button-icon cross-icon 
+                cross-icon--big"></span>
+              <span class="visually-hidden">
+                Закрыть диалоговое окно
+              </span>
+            </button>
+            <div class="modal__wrapper">
+              <p class="modal__wrapper-description">
+                Спасибо!
+                <strong class="modal__wrapper-description 
+                  modal__wrapper-description--little">
+                  Проверьте почтовый ящик!
+                </strong> 
+                <strong class="modal__wrapper-description
+                  modal__wrapper-description--very-little">
+                  На указанную почту была выслана подборка с выбранными товарами
+                </strong> 
+              </p>
+            </div>
+          </dialog>
         </div>
       </form>
     </section>
@@ -451,7 +579,7 @@
       </dl>
     </div>
   </footer>
-  <dialog class="mobile-overlay visible-tablet" id="mobileOverlay">
+  <dialog id="mobileOverlay" class="mobile-overlay visible-tablet">
     <form class="mobile-overlay__close-button-wrapper" method="dialog">
       <button class="mobile-overlay__close-button cross-button 
         cross-button--rotated reset-button" aria-label="Закрыть навигационное

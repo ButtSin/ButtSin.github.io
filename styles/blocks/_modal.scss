@@ -1,0 +1,162 @@
+.modal {
+  position: fixed;
+
+  width: 500px;
+  padding: 21px 20px;
+
+  border: none;
+
+  overflow: hidden;
+
+  &::backdrop {    
+    background: var(--color-light-orange);
+    opacity: 0.1;
+  }
+
+  &:modal {
+    max-width: 100%;
+  }
+
+  @include tablet-s {
+    padding: 11px 10px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  &--little {
+    .modal__wrapper-description {
+      margin-block: 36px 35.5px;
+    }
+
+    .modal__wrapper-input {
+      padding-bottom: 5px;
+
+      &-checkbox {
+        margin-top: -10px;
+
+        @include mobile {
+          margin-top: -18px;
+        }
+      }
+    }
+
+    .modal__button-submit {
+      margin-top: 12px;
+
+      @include tablet-s {
+        margin-top: 1px;
+      }
+    }
+  }
+
+  &--text-thanks {
+    min-height: 230px;
+    
+    .modal__wrapper-description {
+      margin-block: 50px 10px;
+
+      &--little, &--very-little {
+        margin-block: 10px 0;
+      }
+    }
+  }
+
+  &--text-thanks-mail {
+    min-height: 230px;
+    
+    .modal__wrapper-description {
+      margin-block: 42px 1px;
+
+      &--little {
+        margin-block: 1px 10px;
+      }
+
+      &--very-little {
+        margin-block: 0 10px;
+
+        @include tablet-s {
+          padding-inline: 29.5px;
+        }
+      }
+    }
+  }
+
+  &__close-button {
+    width: 25px;
+    margin: -4px -7.5px 0 auto;
+
+    &-icon {
+      &::after, &::before {
+        width: 13px;
+        height: 3.5px;
+
+        @include mobile {
+          width: 11px;
+          height: 3px;
+        }
+      }
+    }
+  }
+
+  &__wrapper {
+    &-description {
+      display: block;
+      margin-block: 31px 37.5px;
+
+      @include setRem(18);
+      text-align: center;
+      font-weight: 700;
+    
+      &--little {
+        margin-block: 0 -4px;
+
+        @include setRem(16);
+        font-weight: 600;
+
+        @include tablet-s {
+          padding-inline: 40px;
+          margin-bottom: -14px;
+
+          @include setRem(14);
+        }
+      }
+
+      &--very-little {
+        @include setRem(14);
+        font-weight: 400;
+
+        @include tablet-s {
+          padding-inline: 40px;
+
+          @include setRem(12);
+        }
+      }
+    }
+
+    &-input {
+      width: 100%;
+      padding-bottom: 8px;
+      margin-bottom: 21.5px;
+      margin-left: 1px;
+
+      &-checkbox {
+        margin-block: -6px 34px;
+
+        @include mobile {
+          margin-block: -12px 24px;
+        }
+      }
+    }
+  }
+
+  &__button-submit {
+    width: 100%;
+    margin-top: 8px;
+
+    @include tablet-s {
+      margin-top: 2px;
+    }
+  }
+}

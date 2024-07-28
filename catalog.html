@@ -329,13 +329,13 @@
                 </article>
               </li>
               <li class="catalog__product-section-item">
-                <article class="product-card product-card--elongated-mb">
+                <article class="product-card product-card--elongated-mb
+                  product-card--wide-image">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
                     </p>
-                    <img class="product-card__header-image
-                      product-card__header-image--with-margin" alt="Дизайнерский
+                    <img class="product-card__header-image" alt="Дизайнерский
                       светильник" src="images/new-items/1.webp" width="256" 
                         height="96">
                   </div>
@@ -386,10 +386,9 @@
                     <p class="product-card__header-watts">
                       Вт
                     </p>
-                    <img class="product-card__header-image 
-                      product-card__header-image--with-margin" alt="Дизайнерский
-                        светильник" src="images/new-items/1.webp" width="256" 
-                          height="96">
+                    <img class="product-card__header-image" alt="Дизайнерский
+                      светильник" src="images/new-items/1.webp" width="256" 
+                        height="96">
                   </div>
                   <div class="product-card__body">
                     <h3 class="product-card__body-title h4">
@@ -435,7 +434,8 @@
           </div>
         </section>
         <section class="section catalog__product-section">
-          <header class="section__header catalog__product-section-header">
+          <header class="section__header catalog__product-section-header
+            section catalog__product-section-header--big-margin">
             <h2 class="section__header-title section__header-title--little-lh
               catalog__product-section-title">
               Весь каталог
@@ -444,7 +444,8 @@
           <div class="section__body">
             <ul class="catalog__product-section-list grid grid--3">
               <li class="catalog__product-section-item">
-                <article class="product-card product-card--elongated-mb">
+                <article class="product-card product-card--elongated-mb 
+                  product-card--wide-image">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
@@ -546,15 +547,15 @@
                 </article>
               </li>
               <li class="catalog__product-section-item">
-                <article class="product-card product-card--elongated-mb">
+                <article class="product-card product-card--elongated-mb
+                  product-card--wide-image">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
                     </p>
-                    <img class="product-card__header-image
-                      product-card__header-image--with-margin" alt="Дизайнерский
-                        светильник" src="images/new-items/1.webp" width="256" 
-                          height="96" loading="lazy">
+                    <img class="product-card__header-image" alt="Дизайнерский
+                      светильник" src="images/new-items/1.webp" width="256" 
+                        height="96" loading="lazy">
                   </div>
                   <div class="product-card__body">
                     <h3 class="product-card__body-title h4">
@@ -598,7 +599,8 @@
                 </article>
               </li>
               <li class="catalog__product-section-item">
-                <article class="product-card product-card--elongated-mb">
+                <article class="product-card product-card--elongated-mb
+                  product-card--wide-image">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
@@ -702,15 +704,14 @@
               </li>
               <li class="catalog__product-section-item">
                 <article class="product-card product-card--elongated-mb 
-                  hidden-mobile">
+                  product-card--wide-image hidden-mobile">
                   <div class="product-card__header">
                     <p class="product-card__header-watts">
                       Вт
                     </p>
-                    <img class="product-card__header-image 
-                      product-card__header-image--with-margin" alt="Дизайнерский
-                        светильник" src="images/new-items/1.webp" width="256" 
-                          height="96" loading="lazy">
+                    <img class="product-card__header-image" alt="Дизайнерский
+                      светильник" src="images/new-items/1.webp" width="256" 
+                        height="96" loading="lazy">
                   </div>
                   <div class="product-card__body">
                     <h3 class="product-card__body-title h4">
@@ -961,12 +962,14 @@
       </dl>
     </div>
   </footer>
-  <dialog class="mobile-overlay visible-tablet" id="mobileOverlay">
+  <dialog id="mobileOverlay" class="mobile-overlay visible-tablet">
     <form class="mobile-overlay__close-button-wrapper" method="dialog">
       <button class="mobile-overlay__close-button cross-button 
-        cross-button--rotated reset-button" aria-label="Закрыть навигационное
-         меню" type="submit">
+        cross-button--rotated reset-button" type="submit">
         <span class="cross-icon cross-icon--big"></span>
+        <span class="visually-hidden">
+          Закрыть навигационное меню
+        </span>
       </button>
     </form>
     <div class="mobile-overlay__body">

@@ -66,6 +66,25 @@
     }
   }
 
+  &--wide-image {
+    .product-card__header {
+      @include mobile {
+        padding-inline: 15px;
+      }
+    }
+    .product-card__header-image {
+      height: auto;
+      margin: 44px 0 0 0;
+      align-self: center;
+
+      @include mobile {
+        height: 100%;
+        margin-top: 10px;
+        align-self: center;
+      }
+    }
+  }
+
   &__header {
     @include flex-center;
     padding-inline: var(--productCardPaddingInline);
@@ -108,10 +127,6 @@
       height: 100%;
 
       object-fit: contain;
-
-      &--with-margin {
-        margin: 50px 10px 0 0;
-      }
     }
   }
 
