@@ -3948,17 +3948,21 @@ h4, .h4 {
   display: block;
   width: -moz-fit-content;
   width: fit-content;
+  padding-block: 5px;
   cursor: pointer;
 }
 .input-checkbox__default:focus-visible + .input-checkbox__indicator {
   border-color: var(--color-blue);
 }
-.input-checkbox__default:hover + .input-checkbox__indicator::after, .input-checkbox__default:checked + .input-checkbox__indicator::after {
+.input-checkbox__default:focus-visible ~ .input-checkbox__text {
+  filter: brightness(80%);
+}
+.input-checkbox__default:focus-visible + .input-checkbox__indicator::after, .input-checkbox__default:hover + .input-checkbox__indicator::after, .input-checkbox__default:checked + .input-checkbox__indicator::after {
   background: url("../..//images/icons/check-mark.svg") center/contain no-repeat;
   background-size: 8.5px 6.5px;
 }
 @media (max-width: 767px) {
-  .input-checkbox__default:hover + .input-checkbox__indicator::after, .input-checkbox__default:checked + .input-checkbox__indicator::after {
+  .input-checkbox__default:focus-visible + .input-checkbox__indicator::after, .input-checkbox__default:hover + .input-checkbox__indicator::after, .input-checkbox__default:checked + .input-checkbox__indicator::after {
     background-size: 8px 5.5px;
   }
 }
@@ -3982,7 +3986,7 @@ h4, .h4 {
     font-size: 0.75rem;
   }
 }
-.input-checkbox__text--underline {
+.input-checkbox__text-underline {
   font-weight: 400;
   text-decoration: underline;
   -webkit-text-decoration-skip-ink: none;
@@ -4036,25 +4040,25 @@ h4, .h4 {
   }
 }
 .modal--little .modal__wrapper-description {
-  margin-block: 36px 35.5px;
+  margin-block: 36px 34px;
 }
 .modal--little .modal__wrapper-input {
   padding-bottom: 5px;
 }
 .modal--little .modal__wrapper-input-checkbox {
-  margin-top: -10px;
+  margin-top: 10px;
 }
 @media (max-width: 500px) {
   .modal--little .modal__wrapper-input-checkbox {
-    margin-top: -18px;
+    margin-top: 0;
   }
 }
 .modal--little .modal__button-submit {
-  margin-top: 12px;
+  margin-top: 30px;
 }
 @media (max-width: 767px) {
   .modal--little .modal__button-submit {
-    margin-top: 1px;
+    margin-top: 19px;
   }
 }
 .modal--text-thanks {
@@ -4105,14 +4109,12 @@ h4, .h4 {
   font-weight: 700;
 }
 .modal__wrapper-description--little {
-  margin-block: 0 -4px;
   font-size: 1rem;
   font-weight: 600;
 }
 @media (max-width: 767px) {
   .modal__wrapper-description--little {
     padding-inline: 40px;
-    margin-bottom: -14px;
     font-size: 0.875rem;
   }
 }
@@ -4132,21 +4134,24 @@ h4, .h4 {
   margin-bottom: 21.5px;
   margin-left: 1px;
 }
+.modal__wrapper-input:last-of-type {
+  margin-bottom: 0;
+}
 .modal__wrapper-input-checkbox {
-  margin-block: -6px 34px;
+  margin-top: 15px;
 }
 @media (max-width: 500px) {
   .modal__wrapper-input-checkbox {
-    margin-block: -12px 24px;
+    margin-top: 5px;
   }
 }
 .modal__button-submit {
   width: 100%;
-  margin-top: 8px;
+  margin-top: 30px;
 }
 @media (max-width: 767px) {
   .modal__button-submit {
-    margin-top: 2px;
+    margin-top: 20px;
   }
 }
 
@@ -4159,7 +4164,7 @@ h4, .h4 {
     margin-bottom: 29px;
   }
 }
-.cart__info {
+.cart__empty-notification {
   margin-top: 20vh;
   margin-bottom: 20vh;
   justify-self: center;
@@ -4168,7 +4173,7 @@ h4, .h4 {
   text-align: center;
 }
 @media (max-width: 767px) {
-  .cart__info {
+  .cart__empty-notification {
     font-size: 0.75rem;
   }
 }

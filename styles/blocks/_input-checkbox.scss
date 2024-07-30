@@ -3,6 +3,7 @@
 
   display: block;
   width: fit-content;
+  padding-block: 5px;
 
   cursor: pointer;
 
@@ -10,6 +11,11 @@
     border-color: var(--color-blue);
   }
 
+  &__default:focus-visible ~ .input-checkbox__text {
+    filter: brightness(80%);
+  }
+
+  &__default:focus-visible + .input-checkbox__indicator,
   &__default:hover + .input-checkbox__indicator,
   &__default:checked + .input-checkbox__indicator {
     &::after {
@@ -52,7 +58,7 @@
       @include setRem(12);
     }
 
-    &--underline {
+    &-underline {
       font-weight: 400;
       text-decoration: underline;
       text-decoration-skip-ink: none;
