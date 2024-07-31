@@ -49,7 +49,7 @@
       }
     }
 
-    .cart-item__title {
+    .cart-item__title-link {
       margin-bottom: 11px;
 
       @include mobile {
@@ -189,18 +189,11 @@
   }
 
   &__title {
-    width: fit-content;
-    margin-right: 20%;
-    margin-bottom: 13px;
-
     @include setRem(16);
     font-weight: 700;
     line-height: 1.37;
 
     @include tablet {
-      margin-right: 20px;
-      margin-block: 0 30px;
-
       @include setRem(14);
     }
 
@@ -209,10 +202,24 @@
     }
 
     @include mobile {
-      margin-right: 40px;
-      margin-bottom: 4.5px;
-
       line-height: 1.52;
+    }
+
+    &-link {
+      display: block;
+      width: fit-content;
+      margin-right: 20%;
+      margin-bottom: 13px;
+
+      @include tablet {
+        margin-right: 20px;
+        margin-block: 0 30px;
+      }
+
+      @include mobile {
+        margin-right: 40px;
+        margin-bottom: 4.5px;
+      }
     }
   }
 
